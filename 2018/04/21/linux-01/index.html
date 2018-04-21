@@ -79,18 +79,30 @@
 
 
 
-<meta name="description" content="1.  ls ：显示目录文件 ls 选项或目录 ![Markdown](http://i1.bvimg.com/642093/376eaf3ca037577cs.png) 2.  ls -l   :显示详情 ![Markdown](http://i1.bvimg.com/642093/3de439e196bfdf88.png) 3.  cd :切换目录  cd [目录名]  cd /   切换回根">
+<meta name="description" content="1.  ls ：显示目录文件 ls 选项或目录  2.  ls -l   :显示详情  3.  cd :切换目录  cd [目录名]  cd /   切换回根目录  cd ..   回到上一级目录  4. 命令前的中括号里是所在路径，当前所在路径也可以用pwd查询  5.  touch [文件名] ：创建空文件     创建完就可以使用 ls 查询到了 6.  mkdir [目录名]  ：创建空目">
 <meta name="keywords" content="java,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux_01">
 <meta property="og:url" content="http://yoursite.com/2018/04/21/linux-01/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.  ls ：显示目录文件 ls 选项或目录 ![Markdown](http://i1.bvimg.com/642093/376eaf3ca037577cs.png) 2.  ls -l   :显示详情 ![Markdown](http://i1.bvimg.com/642093/3de439e196bfdf88.png) 3.  cd :切换目录  cd [目录名]  cd /   切换回根">
+<meta property="og:description" content="1.  ls ：显示目录文件 ls 选项或目录  2.  ls -l   :显示详情  3.  cd :切换目录  cd [目录名]  cd /   切换回根目录  cd ..   回到上一级目录  4. 命令前的中括号里是所在路径，当前所在路径也可以用pwd查询  5.  touch [文件名] ：创建空文件     创建完就可以使用 ls 查询到了 6.  mkdir [目录名]  ：创建空目">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-21T15:22:05.494Z">
+<meta property="og:image" content="http://i1.bvimg.com/642093/376eaf3ca037577cs.png">
+<meta property="og:image" content="http://i1.bvimg.com/642093/3de439e196bfdf88.png">
+<meta property="og:image" content="http://i1.bvimg.com/642093/865b9df3f93fc7c5s.png">
+<meta property="og:image" content="http://i1.bvimg.com/642093/453115c41a87d7aes.png">
+<meta property="og:image" content="http://i1.bvimg.com/642093/099c476a260aef4bs.png">
+<meta property="og:image" content="http://i1.bvimg.com/642093/f33d8a23ae046e43s.png">
+<meta property="og:image" content="http://i1.bvimg.com/642093/3f830095527ed83bs.png">
+<meta property="og:image" content="http://i1.bvimg.com/642093/cd83eb88ce01cd11s.png">
+<meta property="og:image" content="http://i1.bvimg.com/642093/16d4d731e9d8b0efs.png">
+<meta property="og:image" content="http://i1.bvimg.com/642093/280fad2b2968cc55s.png">
+<meta property="og:image" content="http://i1.bvimg.com/642093/8d80a9d3d5ca6b8es.png">
+<meta property="og:updated_time" content="2018-04-21T15:38:21.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux_01">
-<meta name="twitter:description" content="1.  ls ：显示目录文件 ls 选项或目录 ![Markdown](http://i1.bvimg.com/642093/376eaf3ca037577cs.png) 2.  ls -l   :显示详情 ![Markdown](http://i1.bvimg.com/642093/3de439e196bfdf88.png) 3.  cd :切换目录  cd [目录名]  cd /   切换回根">
+<meta name="twitter:description" content="1.  ls ：显示目录文件 ls 选项或目录  2.  ls -l   :显示详情  3.  cd :切换目录  cd [目录名]  cd /   切换回根目录  cd ..   回到上一级目录  4. 命令前的中括号里是所在路径，当前所在路径也可以用pwd查询  5.  touch [文件名] ：创建空文件     创建完就可以使用 ls 查询到了 6.  mkdir [目录名]  ：创建空目">
+<meta name="twitter:image" content="http://i1.bvimg.com/642093/376eaf3ca037577cs.png">
 
 
 
@@ -324,52 +336,42 @@
       
         <pre><code>1.  ls ：显示目录文件
 ls 选项或目录
-![Markdown](http://i1.bvimg.com/642093/376eaf3ca037577cs.png)
-2.  ls -l   :显示详情
-![Markdown](http://i1.bvimg.com/642093/3de439e196bfdf88.png)
-3.  cd :切换目录
+</code></pre><p><img src="http://i1.bvimg.com/642093/376eaf3ca037577cs.png" alt="Markdown"></p>
+<pre><code>2.  ls -l   :显示详情
+</code></pre><p><img src="http://i1.bvimg.com/642093/3de439e196bfdf88.png" alt="Markdown"></p>
+<pre><code>3.  cd :切换目录
  cd [目录名]
  cd /   切换回根目录
  cd ..   回到上一级目录
-![Markdown](http://i1.bvimg.com/642093/865b9df3f93fc7c5s.png)
-4. 命令前的中括号里是所在路径，当前所在路径也可以用pwd查询
-![Markdown](http://i1.bvimg.com/642093/453115c41a87d7aes.png)
-5.  touch [文件名] ：创建空文件
-![Markdown](http://i1.bvimg.com/642093/099c476a260aef4bs.png)
-创建完就可以使用 ls 查询到了
-6.  mkdir [目录名]  ：创建空目录
-![Markdown](http://i1.bvimg.com/642093/f33d8a23ae046e43s.png)
-7.  cp 文件名1 文件名2  …  目录名
+</code></pre><p><img src="http://i1.bvimg.com/642093/865b9df3f93fc7c5s.png" alt="Markdown"></p>
+<pre><code>4. 命令前的中括号里是所在路径，当前所在路径也可以用pwd查询
+</code></pre><p><img src="http://i1.bvimg.com/642093/453115c41a87d7aes.png" alt="Markdown"></p>
+<pre><code>5.  touch [文件名] ：创建空文件
+</code></pre><p><img src="http://i1.bvimg.com/642093/099c476a260aef4bs.png" alt="Markdown"><br>    创建完就可以使用 ls 查询到了</p>
+<pre><code>6.  mkdir [目录名]  ：创建空目录
+</code></pre><p><img src="http://i1.bvimg.com/642093/f33d8a23ae046e43s.png" alt="Markdown"></p>
+<pre><code>7.  cp 文件名1 文件名2  …  目录名
  将1个或n个文件复制到目录下
  8.  cp -r 目录1 文件1 …  目录名
  将n个目录中的内容或者文件复制到目录下
- ![Markdown](http://i1.bvimg.com/642093/3f830095527ed83bs.png)
- mv ：移动或更名
- mv file1 file2 :将file1更名为file2
- mv file1 dir  :将文件或目录移动到dir下
- 仔细观察mv操作：
-![Markdown](http://i1.bvimg.com/642093/cd83eb88ce01cd11s.png)
-10.  rm file2 
+</code></pre><p><img src="http://i1.bvimg.com/642093/3f830095527ed83bs.png" alt="Markdown"><br>     mv ：移动或更名<br>     mv file1 file2 :将file1更名为file2<br>     mv file1 dir  :将文件或目录移动到dir下<br>     仔细观察mv操作：<br><img src="http://i1.bvimg.com/642093/cd83eb88ce01cd11s.png" alt="Markdown"></p>
+<pre><code>10.  rm file2 
  删除文件file2 
  rm –r dir1 
  删除目录dir1 
-![Markdown](http://i1.bvimg.com/642093/16d4d731e9d8b0efs.png)
-11. 
+</code></pre><p><img src="http://i1.bvimg.com/642093/16d4d731e9d8b0efs.png" alt="Markdown"></p>
+<pre><code>11. 
  cat [文件名] ：显示文件内容
  cat /etc/issue 
  cat /etc/services 
 
  执行：cat /etc/services
- ![Markdown](http://i1.bvimg.com/642093/280fad2b2968cc55s.png)
-     more [文件名] 
- (空格)或f 显示下一页 
- (enter) 显示下一行 
- q或Q 退出 
-13. 
+</code></pre><p><img src="http://i1.bvimg.com/642093/280fad2b2968cc55s.png" alt="Markdown"><br>         more [文件名]<br>     (空格)或f 显示下一页<br>     (enter) 显示下一行<br>     q或Q 退出 </p>
+<pre><code>13. 
 head -num [文件名] 
  -num 显示文件的前num行
- ![Markdown](http://i1.bvimg.com/642093/8d80a9d3d5ca6b8es.png)
-</code></pre>
+</code></pre><p><img src="http://i1.bvimg.com/642093/8d80a9d3d5ca6b8es.png" alt="Markdown"></p>
+
       
     </div>
     
