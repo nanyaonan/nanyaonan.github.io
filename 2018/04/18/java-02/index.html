@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java,linux," />
 
 
 
@@ -81,12 +81,13 @@
 
 
 
-<meta name="description" content="#多态之向上造型类型 解释： `属性是绑定到变量上（只能调用父类中有的属性），重写方法是动态绑定到对象上` A a = new B();//a 变量，B是对象  从图中我们可以看出,变量a所能引用的属性只有A中的属性，B中的属性不出现在a可以引用的列表中 此即属性是（静态）绑定到对象变量上的  从图中我们可以看出，此时类B重写了方法printS(); 执行过程如下啊：编译时，引用的是A中的prin">
+<meta name="description" content="多态之向上造型类型解释： `属性是绑定到变量上（只能调用父类中有的属性），重写方法是动态绑定到对象上` A a = new B();//a 变量，B是对象  从图中我们可以看出,变量a所能引用的属性只有A中的属性，B中的属性不出现在a可以引用的列表中 此即属性是（静态）绑定到对象变量上的  从图中我们可以看出，此时类B重写了方法printS(); 执行过程如下啊：编译时，引用的是A中的printS">
+<meta name="keywords" content="java,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java_02">
 <meta property="og:url" content="http://yoursite.com/2018/04/18/java-02/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#多态之向上造型类型 解释： `属性是绑定到变量上（只能调用父类中有的属性），重写方法是动态绑定到对象上` A a = new B();//a 变量，B是对象  从图中我们可以看出,变量a所能引用的属性只有A中的属性，B中的属性不出现在a可以引用的列表中 此即属性是（静态）绑定到对象变量上的  从图中我们可以看出，此时类B重写了方法printS(); 执行过程如下啊：编译时，引用的是A中的prin">
+<meta property="og:description" content="多态之向上造型类型解释： `属性是绑定到变量上（只能调用父类中有的属性），重写方法是动态绑定到对象上` A a = new B();//a 变量，B是对象  从图中我们可以看出,变量a所能引用的属性只有A中的属性，B中的属性不出现在a可以引用的列表中 此即属性是（静态）绑定到对象变量上的  从图中我们可以看出，此时类B重写了方法printS(); 执行过程如下啊：编译时，引用的是A中的printS">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/1.png">
 <meta property="og:image" content="http://yoursite.com/image/2.png">
@@ -94,10 +95,10 @@
 <meta property="og:image" content="http://yoursite.com/image/4.png">
 <meta property="og:image" content="http://yoursite.com/image/5.png">
 <meta property="og:image" content="http://yoursite.com/image/6.png">
-<meta property="og:updated_time" content="2018-05-01T13:22:07.384Z">
+<meta property="og:updated_time" content="2018-05-01T14:04:50.018Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_02">
-<meta name="twitter:description" content="#多态之向上造型类型 解释： `属性是绑定到变量上（只能调用父类中有的属性），重写方法是动态绑定到对象上` A a = new B();//a 变量，B是对象  从图中我们可以看出,变量a所能引用的属性只有A中的属性，B中的属性不出现在a可以引用的列表中 此即属性是（静态）绑定到对象变量上的  从图中我们可以看出，此时类B重写了方法printS(); 执行过程如下啊：编译时，引用的是A中的prin">
+<meta name="twitter:description" content="多态之向上造型类型解释： `属性是绑定到变量上（只能调用父类中有的属性），重写方法是动态绑定到对象上` A a = new B();//a 变量，B是对象  从图中我们可以看出,变量a所能引用的属性只有A中的属性，B中的属性不出现在a可以引用的列表中 此即属性是（静态）绑定到对象变量上的  从图中我们可以看出，此时类B重写了方法printS(); 执行过程如下啊：编译时，引用的是A中的printS">
 <meta name="twitter:image" content="http://yoursite.com/image/1.png">
 
 
@@ -281,6 +282,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -308,8 +331,7 @@
       
 
       
-        <p>#多态之向上造型类型</p>
-<pre><code>解释：
+        <h1 id="多态之向上造型类型"><a href="#多态之向上造型类型" class="headerlink" title="多态之向上造型类型"></a>多态之向上造型类型</h1><pre><code>解释：
 `属性是绑定到变量上（只能调用父类中有的属性），重写方法是动态绑定到对象上`
 </code></pre><p>A a = new B();//a 变量，B是对象</p>
 <p><img src="\image\1.png" alt="avatar"></p>
@@ -351,6 +373,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+        </div>
       
 
       
@@ -425,8 +455,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -452,7 +491,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
@@ -493,6 +532,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多态之向上造型类型"><span class="nav-number">1.</span> <span class="nav-text">多态之向上造型类型</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
