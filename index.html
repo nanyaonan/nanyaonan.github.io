@@ -485,26 +485,26 @@ head -num [文件名]
 <pre><code>解释：
 `属性是绑定到变量上（只能调用父类中有的属性），重写方法是动态绑定到对象上`
 </code></pre><p>A a = new B();//a 变量，B是对象</p>
-<p><img src="http://i4.bvimg.com/642093/b5d69cb27f7c41b1.png" alt="Markdown"></p>
+<p><img src="E:\文件\blog\blog\source\image\java_02/1.png" alt="Markdown"></p>
 <pre><code>从图中我们可以看出,变量a所能引用的属性只有A中的属性，B中的属性不出现在a可以引用的列表中
 此即属性是（静态）绑定到对象变量上的
-</code></pre><p><img src="http://i4.bvimg.com/642093/62691f4247d5d8d2.png" alt="Markdown"></p>
+</code></pre><p><img src="E:\文件\blog\blog\source\image\java_02/2.png" alt="Markdown"></p>
 <pre><code>从图中我们可以看出，此时类B重写了方法printS();
 执行过程如下啊：编译时，引用的是A中的printS();
 但在运行时，发现B中重写了方法,于是就用B中的方法覆盖了A中的方法。
 如下：
-</code></pre><p><img src="http://i4.bvimg.com/642093/62691f4247d5d8d2.png" alt="Markdown"></p>
+</code></pre><p><img src="E:\文件\blog\blog\source\image\java_02/3.png" alt="Markdown"></p>
 <pre><code>此即方法时动态绑定到对象上的。
 
 如若想引用B类中的属性，该如何操作呢？
 见下图：
 将a强制转换为B类型即可。
-</code></pre><p><img src="http://i4.bvimg.com/642093/73890ce45eb48326s.png" alt="Markdown"></p>
+</code></pre><p><img src="E:\文件\blog\blog\source\image\java_02/4.png" alt="Markdown"></p>
 <pre><code>但是我们会发现
-</code></pre><p><img src="http://i4.bvimg.com/642093/c434a045ac96abafs.png" alt="Markdown"></p>
+</code></pre><p><img src="E:\文件\blog\blog\source\image\java_02/5.png" alt="Markdown"></p>
 <pre><code>强制转换为C类型也不会报错，这是因为在编译期间，编译器只检查语法错误。
 现在我们运行一下：
-</code></pre><p><img src="http://i4.bvimg.com/642093/843152555e3ef537s.png" alt="Markdown"></p>
+</code></pre><p><img src="E:\文件\blog\blog\source\image\java_02/6.png" alt="Markdown"></p>
 <pre><code>发现报了ClassCastException错误。
 为了避免类似的错误发生
 我们使用如下方法进行改善代码：
