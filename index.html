@@ -374,10 +374,8 @@ Ex: ln –s /etc/issue /issue.soft
 此时可能会提醒：权限不够
 这是我们有两种解决方案：
 1.进入到root权限下；然后运行该语句 
-![avatar](\image\linux_01\22.png)
-2.使用下面一个命令修改权限
-
-16. 权限管理命令：
+</code></pre><p><img src="\image\linux_01\22.png" alt="avatar"><br>    2.使用下面一个命令修改权限</p>
+<pre><code>16. 权限管理命令：
  chmod :改变权限
  chmod [{ugo}{+-=}{rwx}] [文件或目录] 
         [421] [文件或目录] 
@@ -385,18 +383,13 @@ eg：
  chmod [ugo+-=rwx] 文件或目录
               777
 首先：输入ll命令查看权限：
-![avatar](\image\linux_01\23.png)
-![avatar](\image\linux_01\24.png)
-
-234位表示root权限，567位表示拥有者（创建该文件的用户）的权限，最后三位表示其它组成员的权限。比如，我这个虚拟机除了root 还有nanyaonan和scott这两个用户rwx分别表示可读可写可执行。
+</code></pre><p><img src="\image\linux_01\23.png" alt="avatar"><br><img src="\image\linux_01\24.png" alt="avatar"></p>
+<pre><code>234位表示root权限，567位表示拥有者（创建该文件的用户）的权限，最后三位表示其它组成员的权限。比如，我这个虚拟机除了root 还有nanyaonan和scott这两个用户rwx分别表示可读可写可执行。
 命令中 u 代表root的权限，g代表本组权限，o代表其他组的权限
-![avatar](\image\linux_01\25.png)
-可以看见helloword的user权限已经被改变
-另外r = 4 w =2 x = 1对应上面的mode形式 chmod 764 helloword和上边的语法效果相同
-![avatar](\image\linux_01\26.png)
-17. 文件目录权限总结
-![avatar](\image\linux_01\27.png)
-18. 改变所有者
+</code></pre><p><img src="\image\linux_01\25.png" alt="avatar"><br>    可以看见helloword的user权限已经被改变<br>    另外r = 4 w =2 x = 1对应上面的mode形式 chmod 764 helloword和上边的语法效果相同<br><img src="\image\linux_01\26.png" alt="avatar"></p>
+<pre><code>17. 文件目录权限总结
+</code></pre><p><img src="\image\linux_01\27.png" alt="avatar"></p>
+<pre><code>18. 改变所有者
 chown [用户] [文件或目录] 
 Ex：chown nobody file1 
  改变文件file1的所有者为nobody 
@@ -410,8 +403,8 @@ umask [-S]
  -S 以rwx形式显示新建文件或目录的缺省权限 
 Ex: umask 
  umask -S
-![avatar](\image\linux_01\28.png)
-</code></pre>
+</code></pre><p><img src="\image\linux_01\28.png" alt="avatar"></p>
+
           
         
       
