@@ -231,6 +231,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/04/linux-03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nanyaonan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/04/linux-03/" itemprop="url">linux_03</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-04T15:59:50+08:00">
+                2018-05-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="VMware虚拟机-CentOS-配置之（二）linux配置tomcat"><a href="#VMware虚拟机-CentOS-配置之（二）linux配置tomcat" class="headerlink" title="VMware虚拟机(CentOS)配置之（二）linux配置tomcat"></a>VMware虚拟机(CentOS)配置之（二）linux配置tomcat</h1><h2 id="一、安装包的导入以及虚拟机与主机连接问题"><a href="#一、安装包的导入以及虚拟机与主机连接问题" class="headerlink" title="一、安装包的导入以及虚拟机与主机连接问题"></a>一、安装包的导入以及虚拟机与主机连接问题</h2><pre><code>参考上一篇[](http://nanyaonan.top/2018/05/04/linux-02/)
+</code></pre><h2 id="二、安装tomcat"><a href="#二、安装tomcat" class="headerlink" title="二、安装tomcat"></a>二、安装tomcat</h2><pre><code>1. 到tomcat压缩包目录下
+执行
+tar -zxvf apache-tomcat-7.0.68.tar.gz 
+</code></pre><p><img src="\image\linux_03\1.png" alt="avatar"><br>    可以看到解压后的文件已经存在：<br><img src="\image\linux_03\2.png" alt="avatar"></p>
+<pre><code>2. 在/usr 下建立一个文件夹tomcat5
+</code></pre><p><img src="\image\linux_03\3.png" alt="avatar"><br>    将文件解压后的文件拷贝到该文件夹中<br>    移动命令：mv /usr/local/apache-tomcat-5.5.23 /usr/tomcat5</p>
+<pre><code>3. 进入文件下，然后执行./bin/startup.sh
+</code></pre><p><img src="\image\linux_03\4.png" alt="avatar"></p>
+<pre><code>4. 打开linux浏览器：输入http://localhost:8080
+</code></pre><p><img src="\image\linux_03\5.png" alt="avatar"><br>    出现小猫即为配置成功</p>
+<pre><code>5. 在windows浏览器下输入http://linuxip:8080
+出现小猫即为配置成功
+6. 另外可以查看日志
+</code></pre><p><img src="\image\linux_03\6.png" alt="avatar"><br><img src="\image\linux_03\7.png" alt="avatar"><br>    显示的的是执行的时间</p>
+<pre><code>7. 切记关闭
+</code></pre><p><img src="\image\linux_03\8.png" alt="avatar"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/04/linux-02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -324,7 +482,7 @@
       
         
           
-            <h1 id="虚拟机配置jdk"><a href="#虚拟机配置jdk" class="headerlink" title="虚拟机配置jdk"></a>虚拟机配置jdk</h1><p>首先介绍几个命令：</p>
+            <h1 id="VMware虚拟机-CentOS-配置之（一）linux配置jdk"><a href="#VMware虚拟机-CentOS-配置之（一）linux配置jdk" class="headerlink" title="VMware虚拟机(CentOS)配置之（一）linux配置jdk"></a>VMware虚拟机(CentOS)配置之（一）linux配置jdk</h1><p>首先介绍几个命令：</p>
 <pre><code>#rpm -q -a  查看所有安装包
 #rpm -e [package name] 卸载安装包
 #rpm -e [package name] --nodeps 忽略依赖强制卸载
@@ -1244,7 +1402,7 @@ Ex: reboot
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
