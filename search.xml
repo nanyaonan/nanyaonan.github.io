@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[VMware虚拟机(CentOS)配置之（二）linux配置tomcat]]></title>
     <url>%2F2018%2F05%2F04%2Flinux-03%2F</url>
-    <content type="text"><![CDATA[一、安装包的导入以及虚拟机与主机连接问题参考上一篇 &lt;a href = http://nanyaonan.top/2018/05/04/linux-02/&gt; 二、安装tomcat 1. 到tomcat压缩包目录下 执行 tar -zxvf apache-tomcat-7.0.68.tar.gz 可以看到解压后的文件已经存在： 2. 在/usr 下建立一个文件夹tomcat5 将文件解压后的文件拷贝到该文件夹中 移动命令：mv /usr/local/apache-tomcat-5.5.23 /usr/tomcat5 3. 进入文件下，然后执行./bin/startup.sh 4. 打开linux浏览器：输入http://localhost:8080 出现小猫即为配置成功 5. 在windows浏览器下输入http://linuxip:8080 出现小猫即为配置成功 6. 另外可以查看日志 显示的的是执行的时间 7. 切记关闭]]></content>
+    <content type="text"><![CDATA[一、安装包的导入以及虚拟机与主机连接问题参考上一篇 &lt;a href = http://nanyaonan.top/2018/05/04/linux-02&gt; 二、安装tomcat 1. 到tomcat压缩包目录下 执行 tar -zxvf apache-tomcat-7.0.68.tar.gz 可以看到解压后的文件已经存在： 2. 在/usr 下建立一个文件夹tomcat5 将文件解压后的文件拷贝到该文件夹中 移动命令：mv /usr/local/apache-tomcat-5.5.23 /usr/tomcat5 3. 进入文件下，然后执行./bin/startup.sh 4. 打开linux浏览器：输入http://localhost:8080 出现小猫即为配置成功 5. 在windows浏览器下输入http://linuxip:8080 出现小猫即为配置成功 6. 另外可以查看日志 显示的的是执行的时间 7. 切记关闭]]></content>
       <categories>
         <category>linux</category>
       </categories>
