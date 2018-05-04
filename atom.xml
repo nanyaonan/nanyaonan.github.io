@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-04T03:51:02.060Z</updated>
+  <updated>2018-05-04T03:52:57.538Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,19 +21,17 @@
     <link href="http://yoursite.com/2018/05/04/linux-02/"/>
     <id>http://yoursite.com/2018/05/04/linux-02/</id>
     <published>2018-05-04T03:47:18.000Z</published>
-    <updated>2018-05-04T03:51:02.060Z</updated>
+    <updated>2018-05-04T03:52:57.538Z</updated>
     
-    <content type="html"><![CDATA[<p>#虚拟机配置jdk<br>首先介绍几个命令：</p><pre><code>#rpm -q -a  查看所有安装包#rpm -e [package name] 卸载安装包#rpm -e [package name] --nodeps 忽略依赖强制卸载#rpm -ivh jdk-7u80-linux-x64.rpm  安装 #rpm -q jdk  #rpm -qa | grep jdk  查询是否安装</code></pre><p>下面正式开始配置和安装：（没有特殊说明均在windows下操作）</p><p>##一、windows下安装ssh secure file transfer</p><p>##二、上传安装包</p><pre><code>1. 打开ssh secure file transfer2. 点击左上角quick connect</code></pre><p><img src="\image\linux_02\1.png" alt="avatar"></p><pre><code>3. hostname：虚拟机的ip地址：用ifconfig（虚拟机）命令得到username：是你虚拟机的用户名port：默认22点击connect</code></pre><p><img src="\image\linux_02\2.png" alt="avatar"></p><pre><code>4. 输入密码5. 在右侧进入到/usr/local路径下在左侧进入到你安装包放置的路径下将所需要的安装包从左侧拖到右侧左侧</code></pre><p><img src="\image\linux_02\3.png" alt="avatar"><br>    右侧<br><img src="\image\linux_02\4.png" alt="avatar"></p><p>##三、来到虚拟机终端安装jdk</p><pre><code>1. 查看安装包位置</code></pre><p><img src="\image\linux_02\5.png" alt="avatar">    </p><pre><code>2. 执行rpm -ivh jdk-7u80-linux-x64.rpm</code></pre><p><img src="\image\linux_02\6.png" alt="avatar"><br>    权限不够就换成root权限</p><pre><code>3. 查看java版本</code></pre><p><img src="\image\linux_02\7.png" alt="avatar"><br>    javajdk就安装好了</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="虚拟机配置jdk"><a href="#虚拟机配置jdk" class="headerlink" title="虚拟机配置jdk"></a>虚拟机配置jdk</h1><p>首先介绍几个命令：</p><pre><code>#rpm -q -a  查看所有安装包#rpm -e [package name] 卸载安装包#rpm -e [package name] --nodeps 忽略依赖强制卸载#rpm -ivh jdk-7u80-linux-x64.rpm  安装 #rpm -q jdk  #rpm -qa | grep jdk  查询是否安装</code></pre><p>下面正式开始配置和安装：（没有特殊说明均在windows下操作）</p><h2 id="一、windows下安装ssh-secure-file-transfer"><a href="#一、windows下安装ssh-secure-file-transfer" class="headerlink" title="一、windows下安装ssh secure file transfer"></a>一、windows下安装ssh secure file transfer</h2><h2 id="二、上传安装包"><a href="#二、上传安装包" class="headerlink" title="二、上传安装包"></a>二、上传安装包</h2><pre><code>1. 打开ssh secure file transfer2. 点击左上角quick connect</code></pre><p><img src="\image\linux_02\1.png" alt="avatar"></p><pre><code>3. hostname：虚拟机的ip地址：用ifconfig（虚拟机）命令得到username：是你虚拟机的用户名port：默认22点击connect</code></pre><p><img src="\image\linux_02\2.png" alt="avatar"></p><pre><code>4. 输入密码5. 在右侧进入到/usr/local路径下在左侧进入到你安装包放置的路径下将所需要的安装包从左侧拖到右侧左侧</code></pre><p><img src="\image\linux_02\3.png" alt="avatar"><br>    右侧<br><img src="\image\linux_02\4.png" alt="avatar"></p><h2 id="三、来到虚拟机终端安装jdk"><a href="#三、来到虚拟机终端安装jdk" class="headerlink" title="三、来到虚拟机终端安装jdk"></a>三、来到虚拟机终端安装jdk</h2><pre><code>1. 查看安装包位置</code></pre><p><img src="\image\linux_02\5.png" alt="avatar">    </p><pre><code>2. 执行rpm -ivh jdk-7u80-linux-x64.rpm</code></pre><p><img src="\image\linux_02\6.png" alt="avatar"><br>    权限不够就换成root权限</p><pre><code>3. 查看java版本</code></pre><p><img src="\image\linux_02\7.png" alt="avatar"><br>    javajdk就安装好了</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;#虚拟机配置jdk&lt;br&gt;首先介绍几个命令：&lt;/p&gt;
+        &lt;h1 id=&quot;虚拟机配置jdk&quot;&gt;&lt;a href=&quot;#虚拟机配置jdk&quot; class=&quot;headerlink&quot; title=&quot;虚拟机配置jdk&quot;&gt;&lt;/a&gt;虚拟机配置jdk&lt;/h1&gt;&lt;p&gt;首先介绍几个命令：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;#rpm -q -a  查看所有安装包
-#rpm -e [package name] 卸载安装包
-#rpm -e [package name] --nodeps 忽略依赖强制卸载
-#rpm -ivh
+#
       
     
     </summary>
