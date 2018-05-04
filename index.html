@@ -231,6 +231,178 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/04/linux-02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nanyaonan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/04/linux-02/" itemprop="url">linux_02</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-04T11:47:18+08:00">
+                2018-05-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#虚拟机配置jdk<br>首先介绍几个命令：</p>
+<pre><code>#rpm -q -a  查看所有安装包
+#rpm -e [package name] 卸载安装包
+#rpm -e [package name] --nodeps 忽略依赖强制卸载
+#rpm -ivh jdk-7u80-linux-x64.rpm  安装
+ #rpm -q jdk 
+ #rpm -qa | grep jdk  查询是否安装
+</code></pre><p>下面正式开始配置和安装：（没有特殊说明均在windows下操作）</p>
+<p>##一、windows下安装ssh secure file transfer</p>
+<p>##二、上传安装包</p>
+<pre><code>1. 打开ssh secure file transfer
+2. 点击左上角quick connect
+</code></pre><p><img src="\image\linux_02\1.png" alt="avatar"></p>
+<pre><code>3. hostname：虚拟机的ip地址：用ifconfig（虚拟机）命令得到
+username：是你虚拟机的用户名
+port：默认22
+点击connect
+</code></pre><p><img src="\image\linux_02\2.png" alt="avatar"></p>
+<pre><code>4. 输入密码
+5. 在右侧进入到/usr/local路径下
+在左侧进入到你安装包放置的路径下
+将所需要的安装包从左侧拖到右侧
+左侧
+</code></pre><p><img src="\image\linux_02\3.png" alt="avatar"><br>    右侧<br><img src="\image\linux_02\4.png" alt="avatar"></p>
+<p>##三、来到虚拟机终端安装jdk</p>
+<pre><code>1. 查看安装包位置
+</code></pre><p><img src="\image\linux_02\5.png" alt="avatar">    </p>
+<pre><code>2. 执行rpm -ivh jdk-7u80-linux-x64.rpm
+</code></pre><p><img src="\image\linux_02\6.png" alt="avatar"><br>    权限不够就换成root权限</p>
+<pre><code>3. 查看java版本
+</code></pre><p><img src="\image\linux_02\7.png" alt="avatar"><br>    javajdk就安装好了</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/21/linux-01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1075,7 +1247,7 @@ Ex: reboot
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
