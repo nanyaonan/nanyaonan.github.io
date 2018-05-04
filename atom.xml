@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-04T08:20:04.248Z</updated>
+  <updated>2018-05-04T08:28:12.726Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,17 @@
     <link href="http://yoursite.com/2018/05/04/linux-03/"/>
     <id>http://yoursite.com/2018/05/04/linux-03/</id>
     <published>2018-05-04T07:59:50.000Z</published>
-    <updated>2018-05-04T08:20:04.248Z</updated>
+    <updated>2018-05-04T08:28:12.726Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="VMware虚拟机-CentOS-配置之（二）linux配置tomcat"><a href="#VMware虚拟机-CentOS-配置之（二）linux配置tomcat" class="headerlink" title="VMware虚拟机(CentOS)配置之（二）linux配置tomcat"></a>VMware虚拟机(CentOS)配置之（二）linux配置tomcat</h1><h2 id="一、安装包的导入以及虚拟机与主机连接问题"><a href="#一、安装包的导入以及虚拟机与主机连接问题" class="headerlink" title="一、安装包的导入以及虚拟机与主机连接问题"></a>一、安装包的导入以及虚拟机与主机连接问题</h2><pre><code>参考上一篇</code></pre><p><a href="http://nanyaonan.top/2018/05/04/linux-02/" target="_blank" rel="noopener">http://nanyaonan.top/2018/05/04/linux-02/</a></p><h2 id="二、安装tomcat"><a href="#二、安装tomcat" class="headerlink" title="二、安装tomcat"></a>二、安装tomcat</h2><pre><code>1. 到tomcat压缩包目录下执行tar -zxvf apache-tomcat-7.0.68.tar.gz </code></pre><p><img src="\image\linux_03\1.png" alt="avatar"><br>    可以看到解压后的文件已经存在：<br><img src="\image\linux_03\2.png" alt="avatar"></p><pre><code>2. 在/usr 下建立一个文件夹tomcat5</code></pre><p><img src="\image\linux_03\3.png" alt="avatar"><br>    将文件解压后的文件拷贝到该文件夹中<br>    移动命令：mv /usr/local/apache-tomcat-5.5.23 /usr/tomcat5</p><pre><code>3. 进入文件下，然后执行./bin/startup.sh</code></pre><p><img src="\image\linux_03\4.png" alt="avatar"></p><pre><code>4. 打开linux浏览器：输入http://localhost:8080</code></pre><p><img src="\image\linux_03\5.png" alt="avatar"><br>    出现小猫即为配置成功</p><pre><code>5. 在windows浏览器下输入http://linuxip:8080出现小猫即为配置成功6. 另外可以查看日志</code></pre><p><img src="\image\linux_03\6.png" alt="avatar"><br><img src="\image\linux_03\7.png" alt="avatar"><br>    显示的的是执行的时间</p><pre><code>7. 切记关闭</code></pre><p><img src="\image\linux_03\8.png" alt="avatar"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="VMware虚拟机-CentOS-配置之（二）linux配置tomcat"><a href="#VMware虚拟机-CentOS-配置之（二）linux配置tomcat" class="headerlink" title="VMware虚拟机(CentOS)配置之（二）linux配置tomcat"></a>VMware虚拟机(CentOS)配置之（二）linux配置tomcat</h1><h2 id="一、安装包的导入以及虚拟机与主机连接问题"><a href="#一、安装包的导入以及虚拟机与主机连接问题" class="headerlink" title="一、安装包的导入以及虚拟机与主机连接问题"></a>一、安装包的导入以及虚拟机与主机连接问题</h2><pre><code>参考上一篇</code></pre><p>&lt;a href = <a href="http://nanyaonan.top/2018/05/04/linux-02/&gt;" target="_blank" rel="noopener">http://nanyaonan.top/2018/05/04/linux-02/&gt;</a></p><h2 id="二、安装tomcat"><a href="#二、安装tomcat" class="headerlink" title="二、安装tomcat"></a>二、安装tomcat</h2><pre><code>1. 到tomcat压缩包目录下执行</code></pre><a id="more"></a><pre><code>tar -zxvf apache-tomcat-7.0.68.tar.gz </code></pre><p><img src="\image\linux_03\1.png" alt="avatar"><br>    可以看到解压后的文件已经存在：<br><img src="\image\linux_03\2.png" alt="avatar"></p><pre><code>2. 在/usr 下建立一个文件夹tomcat5</code></pre><p><img src="\image\linux_03\3.png" alt="avatar"><br>    将文件解压后的文件拷贝到该文件夹中<br>    移动命令：mv /usr/local/apache-tomcat-5.5.23 /usr/tomcat5</p><pre><code>3. 进入文件下，然后执行./bin/startup.sh</code></pre><p><img src="\image\linux_03\4.png" alt="avatar"></p><pre><code>4. 打开linux浏览器：输入http://localhost:8080</code></pre><p><img src="\image\linux_03\5.png" alt="avatar"><br>    出现小猫即为配置成功</p><pre><code>5. 在windows浏览器下输入http://linuxip:8080出现小猫即为配置成功6. 另外可以查看日志</code></pre><p><img src="\image\linux_03\6.png" alt="avatar"><br><img src="\image\linux_03\7.png" alt="avatar"><br>    显示的的是执行的时间</p><pre><code>7. 切记关闭</code></pre><p><img src="\image\linux_03\8.png" alt="avatar"></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;VMware虚拟机-CentOS-配置之（二）linux配置tomcat&quot;&gt;&lt;a href=&quot;#VMware虚拟机-CentOS-配置之（二）linux配置tomcat&quot; class=&quot;headerlink&quot; title=&quot;VMware虚拟机(CentOS)配置之
-      
+      &lt;h1 id=&quot;VMware虚拟机-CentOS-配置之（二）linux配置tomcat&quot;&gt;&lt;a href=&quot;#VMware虚拟机-CentOS-配置之（二）linux配置tomcat&quot; class=&quot;headerlink&quot; title=&quot;VMware虚拟机(CentOS)配置之（二）linux配置tomcat&quot;&gt;&lt;/a&gt;VMware虚拟机(CentOS)配置之（二）linux配置tomcat&lt;/h1&gt;&lt;h2 id=&quot;一、安装包的导入以及虚拟机与主机连接问题&quot;&gt;&lt;a href=&quot;#一、安装包的导入以及虚拟机与主机连接问题&quot; class=&quot;headerlink&quot; title=&quot;一、安装包的导入以及虚拟机与主机连接问题&quot;&gt;&lt;/a&gt;一、安装包的导入以及虚拟机与主机连接问题&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;参考上一篇
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;lt;a href = &lt;a href=&quot;http://nanyaonan.top/2018/05/04/linux-02/&amp;gt;&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://nanyaonan.top/2018/05/04/linux-02/&amp;gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;二、安装tomcat&quot;&gt;&lt;a href=&quot;#二、安装tomcat&quot; class=&quot;headerlink&quot; title=&quot;二、安装tomcat&quot;&gt;&lt;/a&gt;二、安装tomcat&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1. 到tomcat压缩包目录下
+执行
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
