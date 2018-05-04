@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="java,linux," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="1.  ls ：显示目录文件 ls 选项或目录">
+<meta name="keywords" content="java,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux文件系统命令">
+<meta property="og:url" content="http://yoursite.com/2018/04/21/linux-01/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.  ls ：显示目录文件 ls 选项或目录">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/11.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/12.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/13.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/14.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/15.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/16.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/17.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/18.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/19.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/20.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/21.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/22.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/23.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/24.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/25.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/26.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/27.png">
+<meta property="og:image" content="http://yoursite.com/image/linux_01/28.png">
+<meta property="og:updated_time" content="2018-05-04T08:43:05.077Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux文件系统命令">
+<meta name="twitter:description" content="1.  ls ：显示目录文件 ls 选项或目录">
+<meta name="twitter:image" content="http://yoursite.com/image/linux_01/11.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/21/linux-01/"/>
+
+
+
+
+
+  <title>linux文件系统命令 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	<a href="https://github.com/nanyaonan"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/21/linux-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nanyaonan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">linux文件系统命令</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-21T22:57:34+08:00">
+                2018-04-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <pre><code>1.  ls ：显示目录文件
+ls 选项或目录
+</code></pre><a id="more"></a>
+<p><img src="\image\linux_01\11.png" alt="avatar"></p>
+<pre><code>2.  ls -l   :显示详情
+</code></pre><p><img src="\image\linux_01\12.png" alt="avatar"></p>
+<pre><code>3.  cd :切换目录
+ cd [目录名]
+ cd /   切换回根目录
+ cd ..   回到上一级目录
+</code></pre><p><img src="\image\linux_01\13.png" alt="avatar"></p>
+<pre><code>4. 命令前的中括号里是所在路径，当前所在路径也可以用pwd查询
+</code></pre><p><img src="\image\linux_01\14.png" alt="avatar"></p>
+<pre><code>5.  touch [文件名] ：创建空文件
+</code></pre><p><img src="\image\linux_01\15.png" alt="avatar"><br>    创建完就可以使用 ls 查询到了</p>
+<pre><code>6.  mkdir [目录名]  ：创建空目录
+</code></pre><p><img src="\image\linux_01\16.png" alt="avatar"></p>
+<pre><code>7.  cp 文件名1 文件名2  …  目录名
+ 将1个或n个文件复制到目录下
+ 8.  cp -r 目录1 文件1 …  目录名
+ 将n个目录中的内容或者文件复制到目录下
+</code></pre><p><img src="\image\linux_01\17.png" alt="avatar"><br>     mv ：移动或更名<br>     mv file1 file2 :将file1更名为file2<br>     mv file1 dir  :将文件或目录移动到dir下<br>     仔细观察mv操作：<br><img src="\image\linux_01\18.png" alt="avatar"></p>
+<pre><code>10.  rm file2 
+ 删除文件file2 
+ rm –r dir1 
+ 删除目录dir1 
+</code></pre><p><img src="\image\linux_01\19.png" alt="avatar">)</p>
+<pre><code>11. 
+ cat [文件名] ：显示文件内容
+ cat /etc/issue 
+ cat /etc/services 
+
+ 执行：cat /etc/services
+</code></pre><p><img src="\image\linux_01\20.png" alt="avatar"><br>         more [文件名]<br>     (空格)或f 显示下一页<br>     (enter) 显示下一行<br>     q或Q 退出 </p>
+<pre><code>13. 
+head -num [文件名] 
+ -num 显示文件的前num行
+</code></pre><p><img src="\image\linux_01\21.png" alt="avatar"></p>
+<pre><code>14.  tail -num [文件名]
+显示文件的后num行
+15. ln -s [源文件] [目标文件] 
+ -s 创建软连接 
+Ex: ln –s /etc/issue /issue.soft 
+ 创建文件/etc/issue的软连接/issue.soft 
+ ln /etc/issue /issue.hard 
+ 创建文件/etc/issue的硬链接/issue.
+
+运行命令：ln -s /etc/issue /issue.soft
+此时可能会提醒：权限不够
+这是我们有两种解决方案：
+1.进入到root权限下；然后运行该语句 
+</code></pre><p><img src="\image\linux_01\22.png" alt="avatar"><br>    2.使用下面一个命令修改权限</p>
+<pre><code>16. 权限管理命令：
+ chmod :改变权限
+ chmod [{ugo}{+-=}{rwx}] [文件或目录] 
+        [421] [文件或目录] 
+eg：
+ chmod [ugo+-=rwx] 文件或目录
+              777
+首先：输入ll命令查看权限：
+</code></pre><p><img src="\image\linux_01\23.png" alt="avatar"><br><img src="\image\linux_01\24.png" alt="avatar"></p>
+<pre><code>234位表示root权限，567位表示拥有者（创建该文件的用户）的权限，最后三位表示其它组成员的权限。比如，我这个虚拟机除了root 还有nanyaonan和scott这两个用户rwx分别表示可读可写可执行。
+命令中 u 代表root的权限，g代表本组权限，o代表其他组的权限
+</code></pre><p><img src="\image\linux_01\25.png" alt="avatar"><br>    可以看见helloword的user权限已经被改变<br>    另外r = 4 w =2 x = 1对应上面的mode形式 chmod 764 helloword和上边的语法效果相同<br><img src="\image\linux_01\26.png" alt="avatar"></p>
+<pre><code>17. 文件目录权限总结
+</code></pre><p><img src="\image\linux_01\27.png" alt="avatar"></p>
+<pre><code>18. 改变所有者
+chown [用户] [文件或目录] 
+Ex：chown nobody file1 
+ 改变文件file1的所有者为nobody 
+19.  chgrp:改变所属组
+chgrp [用户组] [文件或目录] 
+Ex: chgrp adm file1 
+ 改变文件file1的所属组为adm 
+20.  umask:查看系统默认的权限
+直接使用umask：显示的是 0022 ，想得到真正的权限，应该用777去解码（777-022得到的数字即为权限），第一个0是特殊权限
+umask [-S] 
+ -S 以rwx形式显示新建文件或目录的缺省权限 
+Ex: umask 
+ umask -S
+</code></pre><p><img src="\image\linux_01\28.png" alt="avatar"></p>
+<pre><code>21. 其它命令就不一一演示了，自行验证：
+
+
+22. 文件搜索命令 
+命令名称：which 
+命令路径：/usr/bin/which 
+执行权限：所有用户 
+功能描述：显示系统命令所在目录 
+语法：while [命令名称] 
+Ex: which ls 
+
+23. 文件搜索命令 
+命令名称：find 
+命令路径：/usr/bin/find 
+执行权限：所有用户 
+功能描述：查找文件或目录 
+语法：find [搜索路径] [搜寻关键字] 
+范例 
+ Ex: find /etc -name init 
+ 在目录/etc中查找文件 
+ find / -size +204800 
+ 在根目录下查找大于100M的文件 
+ find / -user sam 
+ 在根目录下查找所有者为sam的文件 
+ find /etc -ctime -1 
+ 在/etc下查找24小时内被修改过属性的文件或目录 
+ find /etc –size +163840 –a –size -204800 
+ 在/etc下查找大于—小于--的文件 
+ find /etc -name inittab -exec ls -l {} \; 
+ 在/etc下查找inittab文件并显示详细信息
+
+
+24. 文件搜索命令 
+命令名称：locate 
+命令原意：list files in databases 
+命令路径：/usr/bin/locate 
+执行权限：所有用户 
+功能描述：寻找文件和目录 
+语法：locate [命令名称] 
+Ex: locate file 
+ 列出所有跟file相关的文件
+
+
+25. 文件搜索命令 
+命令名称：updatedb 
+命令原意：update the slocate databases 
+命令路径：/usr/bin/updatedb 
+执行权限：root 
+功能描述：建立整个系统目录文件的数据库 
+语法：updatedb 
+Ex: updatedb 文件搜索命
+
+
+26. 文件搜索命令 
+命令名称：grep 
+命令原意： 
+命令路径：/bin/grep 
+执行权限：所有用户 
+功能描述：在文件中搜寻字串匹配的行并输出 
+语法：grep [指定字符] [源文件] 
+Ex: grep ftp /etc/services 
+
+
+27. 帮助命令 
+命令名称：man 
+命令原意：manual 
+命令路径：/usr/bin/man 
+执行权限：所有用户 
+功能描述：获取帮助信息 
+语法：man [命令或配置文件] 
+Ex: man ls 
+ 查看ls命令的帮助信息 
+ man services 
+ 查看配置文件services的帮助信息
+
+
+28. 帮助命令 
+命令名称：info 
+命令原意：information 
+命令路径：/usr/bin/info 
+执行权限：所有用户 
+功能描述：获取帮助信息 
+语法：info [任何关键字] 
+Ex: iinfo ls 
+ 查看ls命令的帮助信息
+
+
+29. 帮助命令 
+命令名称：whatis、apropos makewhatis 
+命令原意：search the whatis database for strings 
+命令路径：/usr/bin/whatis apropos 
+ /usr/sbin/makewhatis 
+执行权限：all user、 all user、root 
+功能描述：获取索引的简短说明信息 
+语法：whatis apropos [任何关键字] 
+Ex: whatis ls 
+ apropos fstab 相当于man -k 
+ makewhatis 
+ 建立前两个命令使用的数据库，当使用这两个命
+令发生错误时，就是whatis dababase没有建立
+
+
+30. 压缩解压命令 
+不同格式的压缩包需要不同的命令
+命令名称：gzip 
+命令原意：gnu zip 
+命令路径：/bin/gzip 
+执行权限：所有用户 
+功能描述：压缩文件 
+语法：gzip 选项 [文件] 
+压缩后文件格式：.gz 
+
+
+31. 压缩解压命令 
+命令名称：gunzip 
+命令原意：gnu unzip 
+命令路径：/bin/gunzip 
+执行权限：所有用户 
+功能描述：解压缩.gz的压缩文件 
+语法：gunzip 选项 [压缩文件] 
+Ex：gunzip file1.gz 
+
+
+32. 压缩解压命令 
+ 命令名称：tar 
+命令原意： 
+命令路径：/bin/tar 
+执行权限：所有用户 
+功能描述：打包目录 
+语法：tar 选项 [目录] 
+ -c 产生.tar打包文件 
+ -v 显示详细信息 
+ -f 指定压缩后的文件名 
+ -z 打包同时压缩 
+格式：.tar.gz 
+Ex: tar –zcvf dir1.tar.gz dir1 
+ 将目录dir1压缩成一个打包并压缩的文件 
+
+
+33. 压缩解压命令 
+命令名称：zip 
+命令原意： 
+命令路径：/usr/bin/zip 
+执行权限：所有用户 
+功能描述：压缩文件或目录 
+语法： 
+ zip 选项 [压缩后文件名称] [文件或目录] 
+ -r 压缩目录 
+格式：.zip 
+Ex: zip services.zip /etc/services 
+ zip -r test.zip /test
+
+
+34. 压缩解压命令 
+命令名称：unzip 
+命令原意： 
+命令路径：/usr/bin/unzip 
+执行权限：所有用户 
+功能描述：解压.zip的压缩文件 
+语法： 
+ unzip [压缩文件] 
+Ex: upzip test.zip 
+
+
+35. 压缩解压命令 
+命令名称：bzip2 
+命令原意： 
+命令路径：/usr/bin/bzip2 
+执行权限：所有用户 
+功能描述：压缩文件 
+语法： 
+ bzip2 选项 [文件] 
+ -k 产生压缩文件后保留源文件 
+格式： .bz2 
+Ex: bzip2 –k file1
+
+
+36. 压缩解压命令 
+命令名称：bunzip2 
+命令原意： 
+命令路径：/usr/bin/bunzip2 
+执行权限：所有用户 
+功能描述：解压缩 
+语法： 
+ bzip2 选项 [文件] 
+ -k 解压缩后保留源文件 
+Ex: bunzip2 –k file1.bz2 
+
+
+37. 网络通信命令 
+命令名称：write 
+命令原意： 
+命令路径：/usr/bin/write 
+执行权限：所有用户 
+功能描述：向另外一个用户发信息，以ctrl+D作为结束 
+语法： 
+ write &lt;用户名&gt; 
+Ex: write webmaster
+
+
+38. 网络通信命令 
+命令名称：wall 
+命令原意： 
+命令路径：/usr/bin/wall 
+执行权限：所有用户 
+功能描述：向所有用户广播信息 
+语法： 
+ wall [message] [文件名] 
+Ex: wall Happy New Year 
+
+
+39. 网络通信命令 
+命令名称：ping 
+命令原意： 
+命令路径：/usr/sbin/ping 
+执行权限：root 
+功能描述：测试网络连通性 
+语法： 
+ ping 选项 ip地址 
+Ex: ping 192.168.1.1 
+
+
+40. 网络通信命令     
+命令名称：ifconfig 
+命令原意： 
+命令路径：/usr/sbin/ifconfig 
+执行权限：root 
+功能描述：查看网络设置信息 
+语法： 
+ ifconfig 选项 [网卡设备标识] 
+ -a 显示所有网卡信息 
+Ex: ifconfig -a
+
+
+41. 系统关机命令 
+命令名称：shutdown 
+命令原意： 
+命令路径：/usr/sbin/shutdown 
+执行权限：root 
+功能描述：关机 
+语法： 
+ shutdown 
+Ex: shutdown –h now 
+
+
+42. 系统关机命令 
+ 不抱有一丝幻想，不放弃一点机会，不停止一日努力
+ 成功的秘诀就在于多努力一次。为了成功，你努力了多少次 
+命令名称：reboot 
+命令原意： 
+命令路径：/usr/sbin/reboot 
+执行权限：root 
+功能描述：重启系统 
+语法： 
+ reboot 
+Ex: reboot
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/18/java-02/" rel="next" title="多态之向上造型类型">
+                <i class="fa fa-chevron-left"></i> 多态之向上造型类型
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/04/linux-02/" rel="prev" title="VMware虚拟机(CentOS)配置之（一）linux配置jdk">
+                VMware虚拟机(CentOS)配置之（一）linux配置jdk <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">nanyaonan</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nanyaonan</span>
+
+  
+</div>
+
+
+	<div class="powered-by">
+	<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+		本站访客数:<span id="busuanzi_value_site_uv"></span>
+	</span>
+	</div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+undefined
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":"wanko","bottom":-30,"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/"});</script></body>
+</html>
