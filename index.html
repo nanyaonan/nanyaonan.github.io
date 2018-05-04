@@ -404,7 +404,263 @@ umask [-S]
 Ex: umask 
  umask -S
 </code></pre><p><img src="\image\linux_01\28.png" alt="avatar"></p>
+<pre><code>21. 其它命令就不一一演示了，自行验证：
 
+
+22. 文件搜索命令 
+命令名称：which 
+命令路径：/usr/bin/which 
+执行权限：所有用户 
+功能描述：显示系统命令所在目录 
+语法：while [命令名称] 
+Ex: which ls 
+
+23. 文件搜索命令 
+命令名称：find 
+命令路径：/usr/bin/find 
+执行权限：所有用户 
+功能描述：查找文件或目录 
+语法：find [搜索路径] [搜寻关键字] 
+范例 
+ Ex: find /etc -name init 
+ 在目录/etc中查找文件 
+ find / -size +204800 
+ 在根目录下查找大于100M的文件 
+ find / -user sam 
+ 在根目录下查找所有者为sam的文件 
+ find /etc -ctime -1 
+ 在/etc下查找24小时内被修改过属性的文件或目录 
+ find /etc –size +163840 –a –size -204800 
+ 在/etc下查找大于—小于--的文件 
+ find /etc -name inittab -exec ls -l {} \; 
+ 在/etc下查找inittab文件并显示详细信息
+
+
+24. 文件搜索命令 
+命令名称：locate 
+命令原意：list files in databases 
+命令路径：/usr/bin/locate 
+执行权限：所有用户 
+功能描述：寻找文件和目录 
+语法：locate [命令名称] 
+Ex: locate file 
+ 列出所有跟file相关的文件
+
+
+25. 文件搜索命令 
+命令名称：updatedb 
+命令原意：update the slocate databases 
+命令路径：/usr/bin/updatedb 
+执行权限：root 
+功能描述：建立整个系统目录文件的数据库 
+语法：updatedb 
+Ex: updatedb 文件搜索命
+
+
+26. 文件搜索命令 
+命令名称：grep 
+命令原意： 
+命令路径：/bin/grep 
+执行权限：所有用户 
+功能描述：在文件中搜寻字串匹配的行并输出 
+语法：grep [指定字符] [源文件] 
+Ex: grep ftp /etc/services 
+
+
+27. 帮助命令 
+命令名称：man 
+命令原意：manual 
+命令路径：/usr/bin/man 
+执行权限：所有用户 
+功能描述：获取帮助信息 
+语法：man [命令或配置文件] 
+Ex: man ls 
+ 查看ls命令的帮助信息 
+ man services 
+ 查看配置文件services的帮助信息
+
+
+28. 帮助命令 
+命令名称：info 
+命令原意：information 
+命令路径：/usr/bin/info 
+执行权限：所有用户 
+功能描述：获取帮助信息 
+语法：info [任何关键字] 
+Ex: iinfo ls 
+ 查看ls命令的帮助信息
+
+
+29. 帮助命令 
+命令名称：whatis、apropos makewhatis 
+命令原意：search the whatis database for strings 
+命令路径：/usr/bin/whatis apropos 
+ /usr/sbin/makewhatis 
+执行权限：all user、 all user、root 
+功能描述：获取索引的简短说明信息 
+语法：whatis apropos [任何关键字] 
+Ex: whatis ls 
+ apropos fstab 相当于man -k 
+ makewhatis 
+ 建立前两个命令使用的数据库，当使用这两个命
+令发生错误时，就是whatis dababase没有建立
+
+
+30. 压缩解压命令 
+不同格式的压缩包需要不同的命令
+命令名称：gzip 
+命令原意：gnu zip 
+命令路径：/bin/gzip 
+执行权限：所有用户 
+功能描述：压缩文件 
+语法：gzip 选项 [文件] 
+压缩后文件格式：.gz 
+
+
+31. 压缩解压命令 
+命令名称：gunzip 
+命令原意：gnu unzip 
+命令路径：/bin/gunzip 
+执行权限：所有用户 
+功能描述：解压缩.gz的压缩文件 
+语法：gunzip 选项 [压缩文件] 
+Ex：gunzip file1.gz 
+
+
+32. 压缩解压命令 
+ 命令名称：tar 
+命令原意： 
+命令路径：/bin/tar 
+执行权限：所有用户 
+功能描述：打包目录 
+语法：tar 选项 [目录] 
+ -c 产生.tar打包文件 
+ -v 显示详细信息 
+ -f 指定压缩后的文件名 
+ -z 打包同时压缩 
+格式：.tar.gz 
+Ex: tar –zcvf dir1.tar.gz dir1 
+ 将目录dir1压缩成一个打包并压缩的文件 
+
+
+33. 压缩解压命令 
+命令名称：zip 
+命令原意： 
+命令路径：/usr/bin/zip 
+执行权限：所有用户 
+功能描述：压缩文件或目录 
+语法： 
+ zip 选项 [压缩后文件名称] [文件或目录] 
+ -r 压缩目录 
+格式：.zip 
+Ex: zip services.zip /etc/services 
+ zip -r test.zip /test
+
+
+34. 压缩解压命令 
+命令名称：unzip 
+命令原意： 
+命令路径：/usr/bin/unzip 
+执行权限：所有用户 
+功能描述：解压.zip的压缩文件 
+语法： 
+ unzip [压缩文件] 
+Ex: upzip test.zip 
+
+
+35. 压缩解压命令 
+命令名称：bzip2 
+命令原意： 
+命令路径：/usr/bin/bzip2 
+执行权限：所有用户 
+功能描述：压缩文件 
+语法： 
+ bzip2 选项 [文件] 
+ -k 产生压缩文件后保留源文件 
+格式： .bz2 
+Ex: bzip2 –k file1
+
+
+36. 压缩解压命令 
+命令名称：bunzip2 
+命令原意： 
+命令路径：/usr/bin/bunzip2 
+执行权限：所有用户 
+功能描述：解压缩 
+语法： 
+ bzip2 选项 [文件] 
+ -k 解压缩后保留源文件 
+Ex: bunzip2 –k file1.bz2 
+
+
+37. 网络通信命令 
+命令名称：write 
+命令原意： 
+命令路径：/usr/bin/write 
+执行权限：所有用户 
+功能描述：向另外一个用户发信息，以ctrl+D作为结束 
+语法： 
+ write &lt;用户名&gt; 
+Ex: write webmaster
+
+
+38. 网络通信命令 
+命令名称：wall 
+命令原意： 
+命令路径：/usr/bin/wall 
+执行权限：所有用户 
+功能描述：向所有用户广播信息 
+语法： 
+ wall [message] [文件名] 
+Ex: wall Happy New Year 
+
+
+39. 网络通信命令 
+命令名称：ping 
+命令原意： 
+命令路径：/usr/sbin/ping 
+执行权限：root 
+功能描述：测试网络连通性 
+语法： 
+ ping 选项 ip地址 
+Ex: ping 192.168.1.1 
+
+
+40. 网络通信命令     
+命令名称：ifconfig 
+命令原意： 
+命令路径：/usr/sbin/ifconfig 
+执行权限：root 
+功能描述：查看网络设置信息 
+语法： 
+ ifconfig 选项 [网卡设备标识] 
+ -a 显示所有网卡信息 
+Ex: ifconfig -a
+
+
+41. 系统关机命令 
+命令名称：shutdown 
+命令原意： 
+命令路径：/usr/sbin/shutdown 
+执行权限：root 
+功能描述：关机 
+语法： 
+ shutdown 
+Ex: shutdown –h now 
+
+
+42. 系统关机命令 
+ 不抱有一丝幻想，不放弃一点机会，不停止一日努力
+ 成功的秘诀就在于多努力一次。为了成功，你努力了多少次 
+命令名称：reboot 
+命令原意： 
+命令路径：/usr/sbin/reboot 
+执行权限：root 
+功能描述：重启系统 
+语法： 
+ reboot 
+Ex: reboot
+</code></pre>
           
         
       
