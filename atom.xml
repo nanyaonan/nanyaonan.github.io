@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-06T09:56:16.948Z</updated>
+  <updated>2018-05-06T06:17:13.478Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,20 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test_01</title>
-    <link href="http://yoursite.com/2018/05/06/test-01/"/>
-    <id>http://yoursite.com/2018/05/06/test-01/</id>
-    <published>2018-05-06T09:56:16.000Z</published>
-    <updated>2018-05-06T09:56:16.948Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>VMware虚拟机(CentOS)配置之（二）linux配置tomcat</title>
