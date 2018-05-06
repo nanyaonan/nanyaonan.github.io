@@ -727,21 +727,31 @@
 
 
 
+
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
    <script type="text/javascript">
         var gitalk = new Gitalk({
-          clientID: '7a1d33c42f87a2640a4d',
-          clientSecret: 'ead95e6b49a42603fdeb2138b878d6eff6f02db6',
-          repo: 'nanyaonan.github.com',
+          clientID: '9cd9f8628b46ce2a81ee',
+          clientSecret: 'a153042a33f179db7dfbf1720a0523730b2ac666',
+          repo: 'gitskills',
           owner: 'nanyaonan',
           admin: ['nanyaonan'],
           id: location.pathname,
-          distractionFreeMode: 'true'
+          labels: 'gitalk',
+          perPage: 15,
+          pagerDirection: 'first',
+          createIssueManually: true,
+          distractionFreeMode: false
         })
+
         gitalk.render('gitalk-container')           
        </script>
 
+
+.gt-container a{border-bottom: none;}
 
   
 
