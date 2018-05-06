@@ -435,6 +435,8 @@ port：默认22
           
 
   
+	<div id="gitalk-container"></div>
+  
 
 
         </div>
@@ -738,6 +740,22 @@ port：默认22
 
 
 
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '7a1d33c42f87a2640a4d',
+          clientSecret: 'ead95e6b49a42603fdeb2138b878d6eff6f02db6',
+          repo: 'gitskills',
+          owner: 'nanyaonan',
+          admin: ['nanyaonan'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
