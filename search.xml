@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[shell脚本命令：编辑文件（vim命令）输入（read命令）与输出（echo 命令）]]></title>
+    <url>%2F2018%2F05%2F12%2Fshell-01%2F</url>
+    <content type="text"><![CDATA[一、首先进入到linux下的/usr/shell目录下创建一个文件 ‘touch text4.sh’然后 ‘vi test4.sh’进入编辑文件，如图 二、进行编辑输入’a’即可以进行编辑文档 所有的 -p -n -t 等参数及参数后的内容都可以省略 -p:输出提示字符 -n:输入字符串长度，达到此长度，自动结束 -t:输入限制时间，达到时间，自动结束输入 -s: 隐藏输入内容 三、运行文档运行语句’./test4.sh’ 通过运行结果我们发现，输出没有换行，此时我们回到编辑页面 我们看到有输出语句’\n’，因为是转义字符，所以我们应该在’echo’后面加上’-e’来转译然后运行:如图： 四、注意空格,echo后面要有空格才能执行]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[VMware虚拟机(CentOS)配置之（二）linux配置tomcat]]></title>
     <url>%2F2018%2F05%2F04%2Flinux-03%2F</url>
     <content type="text"><![CDATA[一、安装包的导入以及虚拟机与主机连接问题参考上一篇 http://nanyaonan.top/2018/05/04/linux-02/ 二、安装tomcat 1. 到tomcat压缩包目录下 执行 tar -zxvf apache-tomcat-7.0.68.tar.gz 可以看到解压后的文件已经存在： 2. 在/usr 下建立一个文件夹tomcat5 将文件解压后的文件拷贝到该文件夹中 移动命令：mv /usr/local/apache-tomcat-5.5.23 /usr/tomcat5 3. 进入文件下，然后执行./bin/startup.sh 4. 打开linux浏览器：输入http://localhost:8080 出现小猫即为配置成功 5. 在windows浏览器下输入http://linuxip:8080 出现小猫即为配置成功 6. 另外可以查看日志 显示的的是执行的时间 7. 切记关闭]]></content>

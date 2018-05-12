@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-06T06:17:13.478Z</updated>
+  <updated>2018-05-12T03:05:33.149Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>shell脚本命令：编辑文件（vim命令）输入（read命令）与输出（echo 命令）</title>
+    <link href="http://yoursite.com/2018/05/12/shell-01/"/>
+    <id>http://yoursite.com/2018/05/12/shell-01/</id>
+    <published>2018-05-12T01:37:22.000Z</published>
+    <updated>2018-05-12T03:05:33.149Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、首先进入到linux下的-usr-shell目录下"><a href="#一、首先进入到linux下的-usr-shell目录下" class="headerlink" title="一、首先进入到linux下的/usr/shell目录下"></a>一、首先进入到linux下的/usr/shell目录下</h2><p>创建一个文件 ‘touch text4.sh’<br>然后 ‘vi test4.sh’进入编辑文件，如图</p><p><img src="\image\shell_01\1.png" alt="avatar"></p><h2 id="二、进行编辑"><a href="#二、进行编辑" class="headerlink" title="二、进行编辑"></a>二、进行编辑</h2><p>输入’a’即可以进行编辑文档</p><p><img src="\image\shell_01\4.png" alt="avatar"></p><p>所有的 -p -n -t 等参数及参数后的内容都可以省略<br>    -p:输出提示字符<br>    -n:输入字符串长度，达到此长度，自动结束<br>    -t:输入限制时间，达到时间，自动结束输入<br>    -s: 隐藏输入内容</p><h2 id="三、运行文档"><a href="#三、运行文档" class="headerlink" title="三、运行文档"></a>三、运行文档</h2><p>运行语句’./test4.sh’</p><p><img src="\image\shell_01\3.png" alt="avatar"></p><p>通过运行结果我们发现，输出没有换行，此时我们<br>回到编辑页面</p><p><img src="\image\shell_01\2.png" alt="avatar"></p><p>我们看到有输出语句’\n’，因为是转义字符，所以我们应该在’echo’后面加上’-e’来转译<br>然后运行:如图：</p><p><img src="\image\shell_01\5.png" alt="avatar"></p><h2 id="四、注意"><a href="#四、注意" class="headerlink" title="四、注意"></a>四、注意</h2><p>空格,echo后面要有空格才能执行</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一、首先进入到linux下的-usr-shell目录下&quot;&gt;&lt;a href=&quot;#一、首先进入到linux下的-usr-shell目录下&quot; class=&quot;headerlink&quot; title=&quot;一、首先进入到linux下的/usr/shell目录下&quot;&gt;&lt;/a&gt;一、首先进
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>VMware虚拟机(CentOS)配置之（二）linux配置tomcat</title>

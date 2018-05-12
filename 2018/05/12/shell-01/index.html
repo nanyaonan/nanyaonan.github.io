@@ -73,8 +73,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
 
@@ -83,26 +81,24 @@
 
 
 
-<meta name="description" content="首先介绍几个命令： #rpm -q -a  查看所有安装包 #rpm -e [package name] 卸载安装包">
+<meta name="description" content="一、首先进入到linux下的/usr/shell目录下创建一个文件 ‘touch text4.sh’然后 ‘vi test4.sh’进入编辑文件，如图  二、进行编辑输入’a’即可以进行编辑文档  所有的 -p -n -t 等参数及参数后的内容都可以省略    -p:输出提示字符    -n:输入字符串长度，达到此长度，自动结束    -t:输入限制时间，达到时间，自动结束输入    -s: 隐藏">
 <meta name="keywords" content="java,linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VMware虚拟机(CentOS)配置之（一）linux配置jdk">
-<meta property="og:url" content="http://yoursite.com/2018/05/04/linux-02/index.html">
+<meta property="og:title" content="shell脚本命令：编辑文件（vim命令）输入（read命令）与输出（echo 命令）">
+<meta property="og:url" content="http://yoursite.com/2018/05/12/shell-01/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="首先介绍几个命令： #rpm -q -a  查看所有安装包 #rpm -e [package name] 卸载安装包">
+<meta property="og:description" content="一、首先进入到linux下的/usr/shell目录下创建一个文件 ‘touch text4.sh’然后 ‘vi test4.sh’进入编辑文件，如图  二、进行编辑输入’a’即可以进行编辑文档  所有的 -p -n -t 等参数及参数后的内容都可以省略    -p:输出提示字符    -n:输入字符串长度，达到此长度，自动结束    -t:输入限制时间，达到时间，自动结束输入    -s: 隐藏">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/image/linux_02/1.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_02/2.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_02/3.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_02/4.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_02/5.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_02/6.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_02/7.png">
-<meta property="og:updated_time" content="2018-05-04T08:42:52.142Z">
+<meta property="og:image" content="http://yoursite.com/image/shell_01/1.png">
+<meta property="og:image" content="http://yoursite.com/image/shell_01/4.png">
+<meta property="og:image" content="http://yoursite.com/image/shell_01/3.png">
+<meta property="og:image" content="http://yoursite.com/image/shell_01/2.png">
+<meta property="og:image" content="http://yoursite.com/image/shell_01/5.png">
+<meta property="og:updated_time" content="2018-05-12T03:05:33.149Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VMware虚拟机(CentOS)配置之（一）linux配置jdk">
-<meta name="twitter:description" content="首先介绍几个命令： #rpm -q -a  查看所有安装包 #rpm -e [package name] 卸载安装包">
-<meta name="twitter:image" content="http://yoursite.com/image/linux_02/1.png">
+<meta name="twitter:title" content="shell脚本命令：编辑文件（vim命令）输入（read命令）与输出（echo 命令）">
+<meta name="twitter:description" content="一、首先进入到linux下的/usr/shell目录下创建一个文件 ‘touch text4.sh’然后 ‘vi test4.sh’进入编辑文件，如图  二、进行编辑输入’a’即可以进行编辑文档  所有的 -p -n -t 等参数及参数后的内容都可以省略    -p:输出提示字符    -n:输入字符串长度，达到此长度，自动结束    -t:输入限制时间，达到时间，自动结束输入    -s: 隐藏">
+<meta name="twitter:image" content="http://yoursite.com/image/shell_01/1.png">
 
 
 
@@ -132,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/04/linux-02/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/12/shell-01/"/>
 
 
 
 
 
-  <title>VMware虚拟机(CentOS)配置之（一）linux配置jdk | Hexo</title>
+  <title>shell脚本命令：编辑文件（vim命令）输入（read命令）与输出（echo 命令） | Hexo</title>
   
 
 
@@ -245,7 +241,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/04/linux-02/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/12/shell-01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="nanyaonan">
@@ -262,7 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">VMware虚拟机(CentOS)配置之（一）linux配置jdk</h1>
+          <h1 class="post-title" itemprop="name headline">shell脚本命令：编辑文件（vim命令）输入（read命令）与输出（echo 命令）</h1>
         
 
         <div class="post-meta">
@@ -274,8 +270,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-04T11:47:18+08:00">
-                2018-05-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-12T09:37:22+08:00">
+                2018-05-12
               </time>
             
 
@@ -334,35 +330,18 @@
       
 
       
-        <p>首先介绍几个命令：</p>
-<pre><code>#rpm -q -a  查看所有安装包
-#rpm -e [package name] 卸载安装包
-</code></pre><a id="more"></a>
-<pre><code>#rpm -e [package name] --nodeps 忽略依赖强制卸载
-#rpm -ivh jdk-7u80-linux-x64.rpm  安装
- #rpm -q jdk 
- #rpm -qa | grep jdk  查询是否安装
-</code></pre><p>下面正式开始配置和安装：（没有特殊说明均在windows下操作）</p>
-<h2 id="一、windows下安装ssh-secure-file-transfer"><a href="#一、windows下安装ssh-secure-file-transfer" class="headerlink" title="一、windows下安装ssh secure file transfer"></a>一、windows下安装ssh secure file transfer</h2><h2 id="二、上传安装包"><a href="#二、上传安装包" class="headerlink" title="二、上传安装包"></a>二、上传安装包</h2><pre><code>1. 打开ssh secure file transfer
-2. 点击左上角quick connect
-</code></pre><p><img src="\image\linux_02\1.png" alt="avatar"></p>
-<pre><code>3. hostname：虚拟机的ip地址：用ifconfig（虚拟机）命令得到
-username：是你虚拟机的用户名
-port：默认22
-点击connect
-</code></pre><p><img src="\image\linux_02\2.png" alt="avatar"></p>
-<pre><code>4. 输入密码
-5. 在右侧进入到/usr/local路径下
-在左侧进入到你安装包放置的路径下
-将所需要的安装包从左侧拖到右侧
-左侧
-</code></pre><p><img src="\image\linux_02\3.png" alt="avatar"><br>    右侧<br><img src="\image\linux_02\4.png" alt="avatar"></p>
-<h2 id="三、来到虚拟机终端安装jdk"><a href="#三、来到虚拟机终端安装jdk" class="headerlink" title="三、来到虚拟机终端安装jdk"></a>三、来到虚拟机终端安装jdk</h2><pre><code>1. 查看安装包位置
-</code></pre><p><img src="\image\linux_02\5.png" alt="avatar">    </p>
-<pre><code>2. 执行rpm -ivh jdk-7u80-linux-x64.rpm
-</code></pre><p><img src="\image\linux_02\6.png" alt="avatar"><br>    权限不够就换成root权限</p>
-<pre><code>3. 查看java版本
-</code></pre><p><img src="\image\linux_02\7.png" alt="avatar"><br>    javajdk就安装好了</p>
+        <h2 id="一、首先进入到linux下的-usr-shell目录下"><a href="#一、首先进入到linux下的-usr-shell目录下" class="headerlink" title="一、首先进入到linux下的/usr/shell目录下"></a>一、首先进入到linux下的/usr/shell目录下</h2><p>创建一个文件 ‘touch text4.sh’<br>然后 ‘vi test4.sh’进入编辑文件，如图</p>
+<p><img src="\image\shell_01\1.png" alt="avatar"></p>
+<h2 id="二、进行编辑"><a href="#二、进行编辑" class="headerlink" title="二、进行编辑"></a>二、进行编辑</h2><p>输入’a’即可以进行编辑文档</p>
+<p><img src="\image\shell_01\4.png" alt="avatar"></p>
+<p>所有的 -p -n -t 等参数及参数后的内容都可以省略<br>    -p:输出提示字符<br>    -n:输入字符串长度，达到此长度，自动结束<br>    -t:输入限制时间，达到时间，自动结束输入<br>    -s: 隐藏输入内容</p>
+<h2 id="三、运行文档"><a href="#三、运行文档" class="headerlink" title="三、运行文档"></a>三、运行文档</h2><p>运行语句’./test4.sh’</p>
+<p><img src="\image\shell_01\3.png" alt="avatar"></p>
+<p>通过运行结果我们发现，输出没有换行，此时我们<br>回到编辑页面</p>
+<p><img src="\image\shell_01\2.png" alt="avatar"></p>
+<p>我们看到有输出语句’\n’，因为是转义字符，所以我们应该在’echo’后面加上’-e’来转译<br>然后运行:如图：</p>
+<p><img src="\image\shell_01\5.png" alt="avatar"></p>
+<h2 id="四、注意"><a href="#四、注意" class="headerlink" title="四、注意"></a>四、注意</h2><p>空格,echo后面要有空格才能执行</p>
 
       
     </div>
@@ -395,8 +374,8 @@ port：默认22
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/21/linux-01/" rel="next" title="linux文件系统命令 以及 安装VMware虚拟机（CentOS-64）">
-                <i class="fa fa-chevron-left"></i> linux文件系统命令 以及 安装VMware虚拟机（CentOS-64）
+              <a href="/2018/05/04/linux-03/" rel="next" title="VMware虚拟机(CentOS)配置之（二）linux配置tomcat">
+                <i class="fa fa-chevron-left"></i> VMware虚拟机(CentOS)配置之（二）linux配置tomcat
               </a>
             
           </div>
@@ -404,10 +383,6 @@ port：默认22
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/04/linux-03/" rel="prev" title="VMware虚拟机(CentOS)配置之（二）linux配置tomcat">
-                VMware虚拟机(CentOS)配置之（二）linux配置tomcat <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -547,7 +522,7 @@ port：默认22
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、windows下安装ssh-secure-file-transfer"><span class="nav-number">1.</span> <span class="nav-text">一、windows下安装ssh secure file transfer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、上传安装包"><span class="nav-number">2.</span> <span class="nav-text">二、上传安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、来到虚拟机终端安装jdk"><span class="nav-number">3.</span> <span class="nav-text">三、来到虚拟机终端安装jdk</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、首先进入到linux下的-usr-shell目录下"><span class="nav-number">1.</span> <span class="nav-text">一、首先进入到linux下的/usr/shell目录下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、进行编辑"><span class="nav-number">2.</span> <span class="nav-text">二、进行编辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、运行文档"><span class="nav-number">3.</span> <span class="nav-text">三、运行文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、注意"><span class="nav-number">4.</span> <span class="nav-text">四、注意</span></a></li></ol></div>
             
 
           </div>
