@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-12T03:05:33.149Z</updated>
+  <updated>2018-05-15T18:09:35.415Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>VMware虚拟机(CentOS)配置之（三）linux配置hadoop（待续）</title>
+    <link href="http://yoursite.com/2018/05/15/hadoop-01/"/>
+    <id>http://yoursite.com/2018/05/15/hadoop-01/</id>
+    <published>2018-05-15T15:24:50.000Z</published>
+    <updated>2018-05-15T18:09:35.415Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h2><pre><code>我用的是xshell来对虚拟机进行操作的  在windows先下载好需要的jdk和hadoop压缩包首先进入home文件下，home文件下的都是本虚拟机的用户，1.进入当前用户文件夹，2.然后创建一个software文件夹，用来安装的软件</code></pre><p><img src="\image\hadoop_01\1.png" alt="avatar"><br>    3.进入到software文件夹使用输入rz命令打开windows下的文件系统<br>    (如果显示没有rz这个命令，则进行<strong>安装rz</strong>)<br>    4.选择要上传的文件，点击打开现在我们先来上传jdk<br><img src="\image\hadoop_01\2.png" alt="avatar"><br>    5.等待传输完毕即可<br><img src="\image\hadoop_01\3.png" alt="avatar"></p><h2 id="二、配置jdk"><a href="#二、配置jdk" class="headerlink" title="二、配置jdk"></a>二、配置jdk</h2><pre><code>1.ls 命令可以看到jdk压缩包</code></pre><p><img src="\image\hadoop_01\4.png" alt="avatar"><br>    2.tar -xzvf jdk-8u121-linux-x64.tar.gz<br><img src="\image\hadoop_01\5.png" alt="avatar"><br>    3.ls 查看会发现多了一个文件夹<br><img src="\image\hadoop_01\6.png" alt="avatar"><br>    4.现在我们可以删除压缩包了，然后给文件夹改一个简单点的名字，以便配置路径方便<br><img src="\image\hadoop_01\7.png" alt="avatar"><br><img src="\image\hadoop_01\8.png" alt="avatar"><br>    5.修改配置文件<br>    输入 vi /etc/profile 来修改配置文件<br>    打开后，在文件最后的追加如下内容，然后保存<br><img src="\image\hadoop_01\9.png" alt="avatar"><br>    6.执行 source /etc/profile,这样就不用重启就可以生成配置文件了<br><img src="\image\hadoop_01\10.png" alt="avatar"><br>    7.执行 java -version 出现如下结果就表示配置成功了<br><img src="\image\hadoop_01\11.png" alt="avatar"></p><h2 id="三、配置hadoop"><a href="#三、配置hadoop" class="headerlink" title="三、配置hadoop"></a>三、配置hadoop</h2><pre><code>1.和jdk的方式一样放在software下一直配置到解压压缩包配置到如下状态</code></pre><p><img src="\image\hadoop_01\12.png" alt="avatar"><br>    2.修改配置文件如下：<br><img src="\image\hadoop_01\13.png" alt="avatar"><br>    并执行 source /etc/profile<br>    3.测试一下，hdfs命令<br><img src="\image\hadoop_01\14.png" alt="avatar"></p><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><pre><code>进入到 hadoop/etc/hadoop 下，进行文件配置</code></pre><p><img src="\image\hadoop_01\14.png" alt="avatar"></p><pre><code>1. **vi core-site.xml 复制如下代码**</code></pre><!-- Put site-specific property overrides in this file. --><pre><code>&lt;configuration&gt;       &lt;property&gt;                &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;                  &lt;value&gt;file:/usr/hadoop/tmp&lt;/value&gt;        &lt;description&gt;Abase for other temporary directories.&lt;/description&gt;           &lt;/property&gt;         &lt;property&gt;                 &lt;name&gt;fs.defaultFS&lt;/name&gt;                    &lt;value&gt;hdfs://Master:9000&lt;/value&gt;         &lt;/property&gt;&lt;/configuration&gt;修改如下</code></pre><p><img src="\image\hadoop_01\15.png" alt="avatar"></p><pre><code>2. **vi hadoop-env.sh** --安装jdk的路径</code></pre><p><img src="\image\hadoop_01\16.png" alt="avatar"></p><pre><code>3. **vi hdfs-site.xml**首先在 /software/hadoop 下建立一个dfs 文件夹，然后在dfs文件夹下建立一个data 和 name 文件夹，最后在data下建立一个tmp 文件夹然后回到/software/hadoop/etc/hadoop下vi hdfs-site.xml，复制如下：</code></pre><p><configuration><br>         <property><br>                <name>dfs.namenode.secondary.http-address</name><br>                <value>Master:50090</value><br>        </property><br>        <property><br>               <name>dfs.replication</name><br>               <value>1</value><br>        </property><br>        <property><br>               <name>dfs.namenode.name.dir</name><br>               <value>file:/usr/hadoop/tmp/dfs/name</value><br>        </property><br>        <property><br>              <name>dfs.datanode.data.dir</name><br>              <value>file:/usr/hadoop/tmp/dfs/data</value><br>      </property><br>  </configuration><br>    修改如下：<br><img src="\image\hadoop_01\17.png" alt="avatar"></p><pre><code>4. **vi mapred-site.xml**首先执行:</code></pre><p><img src="\image\hadoop_01\18.png" alt="avatar"><br>    复制如下代码：</p><p><configuration><br>       <property><br>        <name>mapreduce.framework.name</name><br>             <value>yarn</value><br>       </property><br>       <property><br>             <name>mapreduce.jobhistory.address</name><br>             <value>Master:10020</value><br>       </property><br>       <property><br>             <name>mapreduce.jobhistory.webapp.address</name><br>             <value>Master:19888</value><br>      </property><br></configuration><br>    修改如下：将master<br><img src="\image\hadoop_01\19.png" alt="avatar"></p><pre><code>5. **vi yarn-site.xml**复制如下代码：</code></pre><configuration>    <pre><code>  &lt;!-- Site specific YARN configuration properties --&gt;      &lt;property&gt;                  &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;              &lt;value&gt;Master&lt;/value&gt;    &lt;/property&gt;   &lt;property&gt;               &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;          &lt;value&gt;mapreduce_shuffle&lt;/value&gt;      &lt;/property&gt;</code></pre><p>   </p></configuration><br>    修改如下：<br><img src="\image\hadoop_01\20.png" alt="avatar"><p></p><pre><code>6. ** vi slaves **修改为slave1和slave2</code></pre><p><img src="\image\hadoop_01\21.png" alt="avatar"><br><img src="\image\hadoop_01\22.png" alt="avatar"></p><pre><code>7. **vi yarn-env.sh**修改如下：</code></pre><p><img src="\image\hadoop_01\23.png" alt="avatar"></p><h2 id="四、启动hadoop"><a href="#四、启动hadoop" class="headerlink" title="四、启动hadoop"></a>四、启动hadoop</h2><pre><code>1.来到bin目录下</code></pre><p><img src="\image\hadoop_01\24.png" alt="avatar"><br>    2.<strong> ./hadoop namenode -format</strong> 执行初始化<br><img src="\image\hadoop_01\25.png" alt="avatar"><br>    3.执行 <strong>./start-all.sh</strong><br><img src="\image\hadoop_01\26.png" alt="avatar"><br>    4.执行jps<br><img src="\image\hadoop_01\27.png" alt="avatar"><br>    出现四个节点则成功配置hadoop<br>    5.到etc/hadoop/下<br>    <strong> vi slaves </strong>将名字修改为对应虚拟机的ip<br><img src="\image\hadoop_01\28.png" alt="avatar"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一、准备&quot;&gt;&lt;a href=&quot;#一、准备&quot; class=&quot;headerlink&quot; title=&quot;一、准备&quot;&gt;&lt;/a&gt;一、准备&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;我用的是xshell来对虚拟机进行操作的  
+在windows先下载好需要的jdk和hadoop压缩包
+首先
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>shell脚本命令：编辑文件（vim命令）输入（read命令）与输出（echo 命令）</title>
     <link href="http://yoursite.com/2018/05/12/shell-01/"/>
     <id>http://yoursite.com/2018/05/12/shell-01/</id>
     <published>2018-05-12T01:37:22.000Z</published>
-    <updated>2018-05-12T03:05:33.149Z</updated>
+    <updated>2018-05-12T16:31:13.296Z</updated>
     
     <content type="html"><![CDATA[<h2 id="一、首先进入到linux下的-usr-shell目录下"><a href="#一、首先进入到linux下的-usr-shell目录下" class="headerlink" title="一、首先进入到linux下的/usr/shell目录下"></a>一、首先进入到linux下的/usr/shell目录下</h2><p>创建一个文件 ‘touch text4.sh’<br>然后 ‘vi test4.sh’进入编辑文件，如图</p><p><img src="\image\shell_01\1.png" alt="avatar"></p><h2 id="二、进行编辑"><a href="#二、进行编辑" class="headerlink" title="二、进行编辑"></a>二、进行编辑</h2><p>输入’a’即可以进行编辑文档</p><p><img src="\image\shell_01\4.png" alt="avatar"></p><p>所有的 -p -n -t 等参数及参数后的内容都可以省略<br>    -p:输出提示字符<br>    -n:输入字符串长度，达到此长度，自动结束<br>    -t:输入限制时间，达到时间，自动结束输入<br>    -s: 隐藏输入内容</p><h2 id="三、运行文档"><a href="#三、运行文档" class="headerlink" title="三、运行文档"></a>三、运行文档</h2><p>运行语句’./test4.sh’</p><p><img src="\image\shell_01\3.png" alt="avatar"></p><p>通过运行结果我们发现，输出没有换行，此时我们<br>回到编辑页面</p><p><img src="\image\shell_01\2.png" alt="avatar"></p><p>我们看到有输出语句’\n’，因为是转义字符，所以我们应该在’echo’后面加上’-e’来转译<br>然后运行:如图：</p><p><img src="\image\shell_01\5.png" alt="avatar"></p><h2 id="四、注意"><a href="#四、注意" class="headerlink" title="四、注意"></a>四、注意</h2><p>空格,echo后面要有空格才能执行</p>]]></content>
     

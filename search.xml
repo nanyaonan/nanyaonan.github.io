@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[VMware虚拟机(CentOS)配置之（三）linux配置hadoop（待续）]]></title>
+    <url>%2F2018%2F05%2F15%2Fhadoop-01%2F</url>
+    <content type="text"><![CDATA[一、准备我用的是xshell来对虚拟机进行操作的 在windows先下载好需要的jdk和hadoop压缩包 首先进入home文件下，home文件下的都是本虚拟机的用户， 1.进入当前用户文件夹， 2.然后创建一个software文件夹，用来安装的软件 3.进入到software文件夹使用输入rz命令打开windows下的文件系统 (如果显示没有rz这个命令，则进行安装rz) 4.选择要上传的文件，点击打开现在我们先来上传jdk 5.等待传输完毕即可 二、配置jdk1.ls 命令可以看到jdk压缩包 2.tar -xzvf jdk-8u121-linux-x64.tar.gz 3.ls 查看会发现多了一个文件夹 4.现在我们可以删除压缩包了，然后给文件夹改一个简单点的名字，以便配置路径方便 5.修改配置文件 输入 vi /etc/profile 来修改配置文件 打开后，在文件最后的追加如下内容，然后保存 6.执行 source /etc/profile,这样就不用重启就可以生成配置文件了 7.执行 java -version 出现如下结果就表示配置成功了 三、配置hadoop1.和jdk的方式一样放在software下一直配置到解压压缩包 配置到如下状态 2.修改配置文件如下： 并执行 source /etc/profile 3.测试一下，hdfs命令 配置文件进入到 hadoop/etc/hadoop 下，进行文件配置 1. **vi core-site.xml 复制如下代码** &lt;configuration&gt; &lt;property&gt; &lt;name&gt;hadoop.tmp.dir&lt;/name&gt; &lt;value&gt;file:/usr/hadoop/tmp&lt;/value&gt; &lt;description&gt;Abase for other temporary directories.&lt;/description&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;fs.defaultFS&lt;/name&gt; &lt;value&gt;hdfs://Master:9000&lt;/value&gt; &lt;/property&gt; &lt;/configuration&gt; 修改如下 2. **vi hadoop-env.sh** --安装jdk的路径 3. **vi hdfs-site.xml** 首先在 /software/hadoop 下建立一个dfs 文件夹，然后在dfs文件夹下建立一个data 和 name 文件夹， 最后在data下建立一个tmp 文件夹 然后回到/software/hadoop/etc/hadoop下 vi hdfs-site.xml，复制如下： dfs.namenode.secondary.http-address Master:50090 dfs.replication 1 dfs.namenode.name.dir file:/usr/hadoop/tmp/dfs/name dfs.datanode.data.dir file:/usr/hadoop/tmp/dfs/data 修改如下： 4. **vi mapred-site.xml** 首先执行: 复制如下代码： mapreduce.framework.name yarn mapreduce.jobhistory.address Master:10020 mapreduce.jobhistory.webapp.address Master:19888 修改如下：将master 5. **vi yarn-site.xml** 复制如下代码： &lt;!-- Site specific YARN configuration properties --&gt; &lt;property&gt; &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt; &lt;value&gt;Master&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt; &lt;value&gt;mapreduce_shuffle&lt;/value&gt; &lt;/property&gt; 修改如下： 6. ** vi slaves ** 修改为slave1和slave2 7. **vi yarn-env.sh** 修改如下： 四、启动hadoop1.来到bin目录下 2. ./hadoop namenode -format 执行初始化 3.执行 ./start-all.sh 4.执行jps 出现四个节点则成功配置hadoop 5.到etc/hadoop/下 vi slaves 将名字修改为对应虚拟机的ip]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[shell脚本命令：编辑文件（vim命令）输入（read命令）与输出（echo 命令）]]></title>
     <url>%2F2018%2F05%2F12%2Fshell-01%2F</url>
     <content type="text"><![CDATA[一、首先进入到linux下的/usr/shell目录下创建一个文件 ‘touch text4.sh’然后 ‘vi test4.sh’进入编辑文件，如图 二、进行编辑输入’a’即可以进行编辑文档 所有的 -p -n -t 等参数及参数后的内容都可以省略 -p:输出提示字符 -n:输入字符串长度，达到此长度，自动结束 -t:输入限制时间，达到时间，自动结束输入 -s: 隐藏输入内容 三、运行文档运行语句’./test4.sh’ 通过运行结果我们发现，输出没有换行，此时我们回到编辑页面 我们看到有输出语句’\n’，因为是转义字符，所以我们应该在’echo’后面加上’-e’来转译然后运行:如图： 四、注意空格,echo后面要有空格才能执行]]></content>
