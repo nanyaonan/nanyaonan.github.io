@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-16T07:34:52.304Z</updated>
+  <updated>2018-05-18T13:05:10.860Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>xshell连接 之如何在xshell上安装rz命令</title>
+    <link href="http://yoursite.com/2018/05/18/xshell-02/"/>
+    <id>http://yoursite.com/2018/05/18/xshell-02/</id>
+    <published>2018-05-18T12:54:50.000Z</published>
+    <updated>2018-05-18T13:05:10.860Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="登录root账号"><a href="#登录root账号" class="headerlink" title="登录root账号"></a>登录root账号</h2><h2 id="yum-install-y-lrzsz"><a href="#yum-install-y-lrzsz" class="headerlink" title="yum install -y lrzsz"></a>yum install -y lrzsz</h2><h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>1.rz:本地上传到虚拟机<br>    执行rz后，会弹出文件系统，选择要上传的安装包，<br>2.sz filename:虚拟机发送文件到本地</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;登录root账号&quot;&gt;&lt;a href=&quot;#登录root账号&quot; class=&quot;headerlink&quot; title=&quot;登录root账号&quot;&gt;&lt;/a&gt;登录root账号&lt;/h2&gt;&lt;h2 id=&quot;yum-install-y-lrzsz&quot;&gt;&lt;a href=&quot;#yum-instal
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>xshell连接 linux虚拟机(CentOS)</title>
+    <link href="http://yoursite.com/2018/05/18/xshell-01/"/>
+    <id>http://yoursite.com/2018/05/18/xshell-01/</id>
+    <published>2018-05-18T12:42:43.000Z</published>
+    <updated>2018-05-18T12:54:05.339Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="首先下载xshell并安装"><a href="#首先下载xshell并安装" class="headerlink" title="首先下载xshell并安装"></a>首先下载xshell并安装</h2><h2 id="连接至虚拟机"><a href="#连接至虚拟机" class="headerlink" title="连接至虚拟机"></a>连接至虚拟机</h2><p><img src="\image\xshell_01\1.png" alt="avatar"><br><img src="\image\xshell_01\2.png" alt="avatar"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;首先下载xshell并安装&quot;&gt;&lt;a href=&quot;#首先下载xshell并安装&quot; class=&quot;headerlink&quot; title=&quot;首先下载xshell并安装&quot;&gt;&lt;/a&gt;首先下载xshell并安装&lt;/h2&gt;&lt;h2 id=&quot;连接至虚拟机&quot;&gt;&lt;a href=&quot;#连接至
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>VMware虚拟机(CentOS)配置之（三）linux配置hadoop（完结）</title>
