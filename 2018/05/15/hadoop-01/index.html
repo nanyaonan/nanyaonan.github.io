@@ -73,8 +73,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
 
@@ -83,13 +81,13 @@
 
 
 
-<meta name="description" content="准备我用的是xshell来对虚拟机进行操作的   在windows先下载好需要的jdk和hadoop压缩包 首先进入home文件下，home文件下的都是本虚拟机的用户， 1.进入当前用户文件夹， 2.然后创建一个software文件夹，用来安装的软件     3.进入到software文件夹使用输入rz命令打开windows下的文件系统    (如果显示没有rz这个命令，则进行安装rz)    4">
+<meta name="description" content="准备我用的是xshell来对虚拟机进行操作的   在windows先下载好需要的jdk和hadoop压缩包 首先进入home文件下，home文件下的都是本虚拟机的用户， 1.进入当前用户文件夹， 2.然后创建一个software文件夹，用来安装的软件     3.进入到software文件夹使用输入rz命令打开windows下的文件系统    (如果显示没有rz这个命令，则进行安装rz)http:">
 <meta name="keywords" content="java,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VMware虚拟机(CentOS)配置之（三）linux配置hadoop（完结）">
 <meta property="og:url" content="http://yoursite.com/2018/05/15/hadoop-01/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="准备我用的是xshell来对虚拟机进行操作的   在windows先下载好需要的jdk和hadoop压缩包 首先进入home文件下，home文件下的都是本虚拟机的用户， 1.进入当前用户文件夹， 2.然后创建一个software文件夹，用来安装的软件     3.进入到software文件夹使用输入rz命令打开windows下的文件系统    (如果显示没有rz这个命令，则进行安装rz)    4">
+<meta property="og:description" content="准备我用的是xshell来对虚拟机进行操作的   在windows先下载好需要的jdk和hadoop压缩包 首先进入home文件下，home文件下的都是本虚拟机的用户， 1.进入当前用户文件夹， 2.然后创建一个software文件夹，用来安装的软件     3.进入到software文件夹使用输入rz命令打开windows下的文件系统    (如果显示没有rz这个命令，则进行安装rz)http:">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/hadoop_01/1.png">
 <meta property="og:image" content="http://yoursite.com/image/hadoop_01/2.png">
@@ -129,10 +127,10 @@
 <meta property="og:image" content="http://yoursite.com/image/hadoop_01/36.png">
 <meta property="og:image" content="http://yoursite.com/image/hadoop_01/37.png">
 <meta property="og:image" content="http://yoursite.com/image/hadoop_01/38.png">
-<meta property="og:updated_time" content="2018-05-16T07:34:52.304Z">
+<meta property="og:updated_time" content="2018-05-18T13:10:27.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VMware虚拟机(CentOS)配置之（三）linux配置hadoop（完结）">
-<meta name="twitter:description" content="准备我用的是xshell来对虚拟机进行操作的   在windows先下载好需要的jdk和hadoop压缩包 首先进入home文件下，home文件下的都是本虚拟机的用户， 1.进入当前用户文件夹， 2.然后创建一个software文件夹，用来安装的软件     3.进入到software文件夹使用输入rz命令打开windows下的文件系统    (如果显示没有rz这个命令，则进行安装rz)    4">
+<meta name="twitter:description" content="准备我用的是xshell来对虚拟机进行操作的   在windows先下载好需要的jdk和hadoop压缩包 首先进入home文件下，home文件下的都是本虚拟机的用户， 1.进入当前用户文件夹， 2.然后创建一个software文件夹，用来安装的软件     3.进入到software文件夹使用输入rz命令打开windows下的文件系统    (如果显示没有rz这个命令，则进行安装rz)http:">
 <meta name="twitter:image" content="http://yoursite.com/image/hadoop_01/1.png">
 
 
@@ -370,7 +368,7 @@
 首先进入home文件下，home文件下的都是本虚拟机的用户，
 1.进入当前用户文件夹，
 2.然后创建一个software文件夹，用来安装的软件
-</code></pre><p><img src="\image\hadoop_01\1.png" alt="avatar"><br>    3.进入到software文件夹使用输入rz命令打开windows下的文件系统<br>    (如果显示没有rz这个命令，则进行<strong>安装rz</strong>)<br>    4.选择要上传的文件，点击打开现在我们先来上传jdk<br><img src="\image\hadoop_01\2.png" alt="avatar"><br>    5.等待传输完毕即可<br><img src="\image\hadoop_01\3.png" alt="avatar"></p>
+</code></pre><p><img src="\image\hadoop_01\1.png" alt="avatar"><br>    3.进入到software文件夹使用输入rz命令打开windows下的文件系统<br>    (如果显示没有rz这个命令，则进行<strong>安装rz</strong>)<br><a href="http://nanyaonan.top/2018/05/18/xshell-02/" target="_blank" rel="noopener">http://nanyaonan.top/2018/05/18/xshell-02/</a><br>    4.选择要上传的文件，点击打开现在我们先来上传jdk<br><img src="\image\hadoop_01\2.png" alt="avatar"><br>    5.等待传输完毕即可<br><img src="\image\hadoop_01\3.png" alt="avatar"></p>
 <h2 id="请忽略我的主机名（-后面的昵称）的变化，是自己的配置问题"><a href="#请忽略我的主机名（-后面的昵称）的变化，是自己的配置问题" class="headerlink" title="请忽略我的主机名（@后面的昵称）的变化，是自己的配置问题"></a>请忽略我的主机名（@后面的昵称）的变化，是自己的配置问题</h2><p>因为我在前面有些配置我在主机上配过了，所以用slave1来为大家写前半部分教程<br>请把我@后面的主机名，统一视为你们自己的主机名就可以了，这样方便你们自己理解。<br><img src="\image\hadoop_01\31.png" alt="avatar"><br>可以在最开始修改一个你想要的主机名，一直使用一个就好</p>
 <h2 id="配置jdk"><a href="#配置jdk" class="headerlink" title="配置jdk"></a>配置jdk</h2><pre><code>1.ls 命令可以看到jdk压缩包
 </code></pre><p><img src="\image\hadoop_01\4.png" alt="avatar"><br>    2.tar -xzvf jdk-8u121-linux-x64.tar.gz<br><img src="\image\hadoop_01\5.png" alt="avatar"><br>    3.ls 查看会发现多了一个文件夹<br><img src="\image\hadoop_01\6.png" alt="avatar"><br>    4.现在我们可以删除压缩包了，然后给文件夹改一个简单点的名字，以便配置路径方便<br><img src="\image\hadoop_01\7.png" alt="avatar"><br><img src="\image\hadoop_01\8.png" alt="avatar"><br>    5.修改配置文件<br>    输入 vi /etc/profile 来修改配置文件<br>    打开后，在文件最后的追加如下内容，然后保存<br><img src="\image\hadoop_01\9.png" alt="avatar"><br>    6.执行 source /etc/profile,这样就不用重启就可以生成配置文件了<br><img src="\image\hadoop_01\10.png" alt="avatar"><br>    7.执行 java -version 出现如下结果就表示配置成功了<br><img src="\image\hadoop_01\11.png" alt="avatar"></p>
