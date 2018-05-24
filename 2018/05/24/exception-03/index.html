@@ -81,27 +81,18 @@
 
 
 
-<meta name="description" content="一、安装包的导入以及虚拟机与主机连接问题参考上一篇 http://nanyaonan.top/2018/05/04/linux-02/ 二、安装tomcat">
+<meta name="description" content="1)throws出现在函数头，throw出现在函数体 2)throws表示了一种抛出异常的可能性，throw则是一定抛出了某种异常 3)两者都是消极处理异常的方式，不会由函数处理异常，而是由上层函数去调用处理。">
 <meta name="keywords" content="java,linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VMware虚拟机(CentOS)配置之（二）linux配置tomcat">
-<meta property="og:url" content="http://yoursite.com/2018/05/04/linux-03/index.html">
+<meta property="og:title" content="throw和throws的区别">
+<meta property="og:url" content="http://yoursite.com/2018/05/24/exception-03/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、安装包的导入以及虚拟机与主机连接问题参考上一篇 http://nanyaonan.top/2018/05/04/linux-02/ 二、安装tomcat">
+<meta property="og:description" content="1)throws出现在函数头，throw出现在函数体 2)throws表示了一种抛出异常的可能性，throw则是一定抛出了某种异常 3)两者都是消极处理异常的方式，不会由函数处理异常，而是由上层函数去调用处理。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/image/linux_03/1.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_03/2.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_03/3.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_03/4.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_03/5.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_03/6.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_03/7.png">
-<meta property="og:image" content="http://yoursite.com/image/linux_03/8.png">
-<meta property="og:updated_time" content="2018-05-06T06:17:13.478Z">
+<meta property="og:updated_time" content="2018-05-24T11:17:57.711Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VMware虚拟机(CentOS)配置之（二）linux配置tomcat">
-<meta name="twitter:description" content="一、安装包的导入以及虚拟机与主机连接问题参考上一篇 http://nanyaonan.top/2018/05/04/linux-02/ 二、安装tomcat">
-<meta name="twitter:image" content="http://yoursite.com/image/linux_03/1.png">
+<meta name="twitter:title" content="throw和throws的区别">
+<meta name="twitter:description" content="1)throws出现在函数头，throw出现在函数体 2)throws表示了一种抛出异常的可能性，throw则是一定抛出了某种异常 3)两者都是消极处理异常的方式，不会由函数处理异常，而是由上层函数去调用处理。">
 
 
 
@@ -131,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/04/linux-03/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/24/exception-03/"/>
 
 
 
 
 
-  <title>VMware虚拟机(CentOS)配置之（二）linux配置tomcat | Hexo</title>
+  <title>throw和throws的区别 | Hexo</title>
   
 
 
@@ -244,7 +235,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/04/linux-03/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/exception-03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="nanyaonan">
@@ -261,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">VMware虚拟机(CentOS)配置之（二）linux配置tomcat</h1>
+          <h1 class="post-title" itemprop="name headline">throw和throws的区别</h1>
         
 
         <div class="post-meta">
@@ -273,8 +264,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-04T15:59:50+08:00">
-                2018-05-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-24T19:16:05+08:00">
+                2018-05-24
               </time>
             
 
@@ -296,8 +287,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/categories/exception/" itemprop="url" rel="index">
+                    <span itemprop="name">exception</span>
                   </a>
                 </span>
 
@@ -333,25 +324,9 @@
       
 
       
-        <h2 id="一、安装包的导入以及虚拟机与主机连接问题"><a href="#一、安装包的导入以及虚拟机与主机连接问题" class="headerlink" title="一、安装包的导入以及虚拟机与主机连接问题"></a>一、安装包的导入以及虚拟机与主机连接问题</h2><pre><code>参考上一篇
-</code></pre><p><a href="http://nanyaonan.top/2018/05/04/linux-02/" target="_blank" rel="noopener">http://nanyaonan.top/2018/05/04/linux-02/</a></p>
-<h2 id="二、安装tomcat"><a href="#二、安装tomcat" class="headerlink" title="二、安装tomcat"></a>二、安装tomcat</h2><a id="more"></a>
-<pre><code>1. 到tomcat压缩包目录下
-执行
-tar -zxvf apache-tomcat-7.0.68.tar.gz 
-</code></pre><p><img src="\image\linux_03\1.png" alt="avatar"><br>    可以看到解压后的文件已经存在：<br><img src="\image\linux_03\2.png" alt="avatar"></p>
-<pre><code>2. 在/usr 下建立一个文件夹tomcat5
-</code></pre><p><img src="\image\linux_03\3.png" alt="avatar"><br>    将文件解压后的文件拷贝到该文件夹中<br>    移动命令：mv /usr/local/apache-tomcat-5.5.23 /usr/tomcat5</p>
-<pre><code>3. 进入文件下，然后执行./bin/startup.sh
-</code></pre><p><img src="\image\linux_03\4.png" alt="avatar"></p>
-<pre><code>4. 打开linux浏览器：输入http://localhost:8080
-</code></pre><p><img src="\image\linux_03\5.png" alt="avatar"><br>    出现小猫即为配置成功</p>
-<pre><code>5. 在windows浏览器下输入http://linuxip:8080
-出现小猫即为配置成功
-6. 另外可以查看日志
-</code></pre><p><img src="\image\linux_03\6.png" alt="avatar"><br><img src="\image\linux_03\7.png" alt="avatar"><br>    显示的的是执行的时间</p>
-<pre><code>7. 切记关闭
-</code></pre><p><img src="\image\linux_03\8.png" alt="avatar"></p>
+        <p>1)throws出现在函数头，throw出现在函数体</p>
+<p>2)throws表示了一种抛出异常的可能性，throw则是一定抛出了某种异常</p>
+<p>3)两者都是消极处理异常的方式，不会由函数处理异常，而是由上层函数去调用处理。</p>
 
       
     </div>
@@ -393,8 +368,8 @@ tar -zxvf apache-tomcat-7.0.68.tar.gz
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/04/linux-02/" rel="next" title="VMware虚拟机(CentOS)配置之（一）linux配置jdk">
-                <i class="fa fa-chevron-left"></i> VMware虚拟机(CentOS)配置之（一）linux配置jdk
+              <a href="/2018/05/24/exception-02/" rel="next" title="如何区分编译时异常和运行时异常">
+                <i class="fa fa-chevron-left"></i> 如何区分编译时异常和运行时异常
               </a>
             
           </div>
@@ -402,10 +377,6 @@ tar -zxvf apache-tomcat-7.0.68.tar.gz
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/12/shell-01/" rel="prev" title="shell脚本命令：编辑文件（vim命令）输入（read命令）与输出（echo 命令）">
-                shell脚本命令：编辑文件（vim命令）输入（read命令）与输出（echo 命令） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -458,17 +429,8 @@ tar -zxvf apache-tomcat-7.0.68.tar.gz
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -535,22 +497,6 @@ tar -zxvf apache-tomcat-7.0.68.tar.gz
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、安装包的导入以及虚拟机与主机连接问题"><span class="nav-number">1.</span> <span class="nav-text">一、安装包的导入以及虚拟机与主机连接问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装tomcat"><span class="nav-number">2.</span> <span class="nav-text">二、安装tomcat</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
