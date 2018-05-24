@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-18T13:05:10.860Z</updated>
+  <updated>2018-05-24T08:30:35.405Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么java被称为平台无关语言(java为什么可跨平台运行)</title>
+    <link href="http://yoursite.com/2018/05/24/java-04/"/>
+    <id>http://yoursite.com/2018/05/24/java-04/</id>
+    <published>2018-05-24T08:29:02.000Z</published>
+    <updated>2018-05-24T08:30:35.405Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>为什么java被称为平台无关（跨平台运行）的编程语言</strong><br>    java虚拟机屏蔽了底层操作系统的差异，只要平台配置了java运行环境，在任何计算机上编译得<br>到的字节码文件就可以任意的的复制给其它配置了java运行环境的计算机，在由该计算机的jvm解释<br>执行，交给本地的操作系统运行。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;为什么java被称为平台无关（跨平台运行）的编程语言&lt;/strong&gt;&lt;br&gt;    java虚拟机屏蔽了底层操作系统的差异，只要平台配置了java运行环境，在任何计算机上编译得&lt;br&gt;到的字节码文件就可以任意的的复制给其它配置了java运行环境的计算机，在
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jre,jdk,jvm之间的关系</title>
+    <link href="http://yoursite.com/2018/05/24/java-03/"/>
+    <id>http://yoursite.com/2018/05/24/java-03/</id>
+    <published>2018-05-24T08:10:35.000Z</published>
+    <updated>2018-05-24T08:31:33.441Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="关系图"><a href="#关系图" class="headerlink" title="关系图"></a>关系图</h2><p><img src="\image\java_03\1.png" alt="avatar"></p><h2 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h2><h3 id="jdk"><a href="#jdk" class="headerlink" title="jdk"></a>jdk</h3><p>java development kit （java工具包）<br>    是构建在java平台上发布的应用程序，applet和组件的开发环境。其中包括了java编译器、JVM、大<br>量的java工具以及java基础API，里面是java类库和Java的语言规范，同时java语言的任何改进都应<br>该加到其中。JDK是最基本的工具。<br><strong>功能</strong>：<br>他是用于构建在Java平台上发布的应用程序、applet和组件的开发环境，它不提供具体的开发软件，<br>他提供的是无论你用何种开发软件写java程序都必须用到的java类库和java语言规范。</p><h3 id="jre"><a href="#jre" class="headerlink" title="jre"></a>jre</h3><p>java runtime environment（java运行时环境）<br>    包含了jvm和java基础类库；是使用java语言编写的程序运行时所需要的软件环境。</p><h3 id="jvm"><a href="#jvm" class="headerlink" title="jvm"></a>jvm</h3><p>是一种抽象化的虚拟机，是通过在实际的计算机上模拟计算机的功能来实现的，具有完善的硬体架构。<br>屏蔽了底层操作系统的差异并减少了基于原生语言开发的复杂性。是的Java语言可以在不同平台不加<br>修改的运行。<br><strong>为什么java被称为平台无关（跨平台运行）的编程语言</strong><br>    java虚拟机屏蔽了底层操作系统的差异，只要平台配置了java运行环境，在任何计算机上编译得<br>到的字节码文件就可以任意的的复制给其它配置了java运行环境的计算机，在由该计算机的jvm解释<br>执行，交给本地的操作系统运行。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;关系图&quot;&gt;&lt;a href=&quot;#关系图&quot; class=&quot;headerlink&quot; title=&quot;关系图&quot;&gt;&lt;/a&gt;关系图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;\image\java_03\1.png&quot; alt=&quot;avatar&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;名词解释&quot;&gt;&lt;a
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>xshell连接 之如何在xshell上安装rz命令</title>

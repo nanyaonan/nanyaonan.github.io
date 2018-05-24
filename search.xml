@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[为什么java被称为平台无关语言(java为什么可跨平台运行)]]></title>
+    <url>%2F2018%2F05%2F24%2Fjava-04%2F</url>
+    <content type="text"><![CDATA[为什么java被称为平台无关（跨平台运行）的编程语言 java虚拟机屏蔽了底层操作系统的差异，只要平台配置了java运行环境，在任何计算机上编译得到的字节码文件就可以任意的的复制给其它配置了java运行环境的计算机，在由该计算机的jvm解释执行，交给本地的操作系统运行。]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[jre,jdk,jvm之间的关系]]></title>
+    <url>%2F2018%2F05%2F24%2Fjava-03%2F</url>
+    <content type="text"><![CDATA[关系图 名词解释jdkjava development kit （java工具包） 是构建在java平台上发布的应用程序，applet和组件的开发环境。其中包括了java编译器、JVM、大量的java工具以及java基础API，里面是java类库和Java的语言规范，同时java语言的任何改进都应该加到其中。JDK是最基本的工具。功能：他是用于构建在Java平台上发布的应用程序、applet和组件的开发环境，它不提供具体的开发软件，他提供的是无论你用何种开发软件写java程序都必须用到的java类库和java语言规范。 jrejava runtime environment（java运行时环境） 包含了jvm和java基础类库；是使用java语言编写的程序运行时所需要的软件环境。 jvm是一种抽象化的虚拟机，是通过在实际的计算机上模拟计算机的功能来实现的，具有完善的硬体架构。屏蔽了底层操作系统的差异并减少了基于原生语言开发的复杂性。是的Java语言可以在不同平台不加修改的运行。为什么java被称为平台无关（跨平台运行）的编程语言 java虚拟机屏蔽了底层操作系统的差异，只要平台配置了java运行环境，在任何计算机上编译得到的字节码文件就可以任意的的复制给其它配置了java运行环境的计算机，在由该计算机的jvm解释执行，交给本地的操作系统运行。]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[xshell连接 之如何在xshell上安装rz命令]]></title>
     <url>%2F2018%2F05%2F18%2Fxshell-02%2F</url>
     <content type="text"><![CDATA[登录root账号yum install -y lrzsz使用说明1.rz:本地上传到虚拟机 执行rz后，会弹出文件系统，选择要上传的安装包，2.sz filename:虚拟机发送文件到本地]]></content>
