@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="关系图 Exception和error的区别errorjava.lang.error错误。一般指系统方面的异常，比如蓝屏，内存溢出，jvm环境出现问题是不可通过程序回复的问题。 exception是可控的异常，程序员在编写程序时可以解决的问题。 throwable是两者的父类 exception是所有异常的父类，其下面可以派生很多子类1)编译时异常：Java.lang.Exception">
+<meta name="description" content="关系图 Exception和error的区别errorjava.lang.error错误。一般指系统方面的异常，比如蓝屏，内存溢出，jvm环境出现问题是不可通过程序恢复的问题。 exception是可控的异常，程序员在编写程序时可以解决的问题。 throwable是两者的父类 exception是所有异常的父类，其下面可以派生很多子类1)编译时异常：Java.lang.Exception">
 <meta name="keywords" content="exception">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java异常机制（详细总结）">
 <meta property="og:url" content="http://yoursite.com/2018/05/24/exception-01/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="关系图 Exception和error的区别errorjava.lang.error错误。一般指系统方面的异常，比如蓝屏，内存溢出，jvm环境出现问题是不可通过程序回复的问题。 exception是可控的异常，程序员在编写程序时可以解决的问题。 throwable是两者的父类 exception是所有异常的父类，其下面可以派生很多子类1)编译时异常：Java.lang.Exception">
+<meta property="og:description" content="关系图 Exception和error的区别errorjava.lang.error错误。一般指系统方面的异常，比如蓝屏，内存溢出，jvm环境出现问题是不可通过程序恢复的问题。 exception是可控的异常，程序员在编写程序时可以解决的问题。 throwable是两者的父类 exception是所有异常的父类，其下面可以派生很多子类1)编译时异常：Java.lang.Exception">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/image/exc_01/1.png">
 <meta property="og:image" content="http://yoursite.com/image/exc_01/2.png">
@@ -102,10 +102,10 @@
 <meta property="og:image" content="http://yoursite.com/image/exc_01/11.png">
 <meta property="og:image" content="http://yoursite.com/image/exc_01/12.png">
 <meta property="og:image" content="http://yoursite.com/image/exc_01/13.png">
-<meta property="og:updated_time" content="2018-06-01T13:45:50.829Z">
+<meta property="og:updated_time" content="2018-06-01T13:46:43.510Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java异常机制（详细总结）">
-<meta name="twitter:description" content="关系图 Exception和error的区别errorjava.lang.error错误。一般指系统方面的异常，比如蓝屏，内存溢出，jvm环境出现问题是不可通过程序回复的问题。 exception是可控的异常，程序员在编写程序时可以解决的问题。 throwable是两者的父类 exception是所有异常的父类，其下面可以派生很多子类1)编译时异常：Java.lang.Exception">
+<meta name="twitter:description" content="关系图 Exception和error的区别errorjava.lang.error错误。一般指系统方面的异常，比如蓝屏，内存溢出，jvm环境出现问题是不可通过程序恢复的问题。 exception是可控的异常，程序员在编写程序时可以解决的问题。 throwable是两者的父类 exception是所有异常的父类，其下面可以派生很多子类1)编译时异常：Java.lang.Exception">
 <meta name="twitter:image" content="http://yoursite.com/image/exc_01/1.png">
 
 
@@ -369,7 +369,7 @@
 
       
         <h2 id="关系图"><a href="#关系图" class="headerlink" title="关系图"></a>关系图</h2><p><img src="\image\exc_01\1.png" alt="avatar"></p>
-<h2 id="Exception和error的区别"><a href="#Exception和error的区别" class="headerlink" title="Exception和error的区别"></a>Exception和error的区别</h2><h3 id="error"><a href="#error" class="headerlink" title="error"></a>error</h3><p>java.lang.error<br>错误。一般指系统方面的异常，比如蓝屏，内存溢出，jvm环境出现问题<br>是不可通过程序回复的问题。</p>
+<h2 id="Exception和error的区别"><a href="#Exception和error的区别" class="headerlink" title="Exception和error的区别"></a>Exception和error的区别</h2><h3 id="error"><a href="#error" class="headerlink" title="error"></a>error</h3><p>java.lang.error<br>错误。一般指系统方面的异常，比如蓝屏，内存溢出，jvm环境出现问题<br>是不可通过程序恢复的问题。</p>
 <h3 id="exception"><a href="#exception" class="headerlink" title="exception"></a>exception</h3><p>是可控的异常，程序员在编写程序时可以解决的问题。</p>
 <h3 id="throwable"><a href="#throwable" class="headerlink" title="throwable"></a>throwable</h3><p>是两者的父类</p>
 <h2 id="exception-1"><a href="#exception-1" class="headerlink" title="exception"></a>exception</h2><p>是所有异常的父类，其下面可以派生很多子类<br>1)编译时异常：Java.lang.Exception         继承自Java.lang.Throwable<br>    eg:IO异常<br>        ClassNotFoundException<br>2)运行时异常: Java.lang.RuntimeException  继承自Java.lang.Exception<br>    eg:NullPointerExceptiom<br>        ArrayIndexOutOfBoundsException<br>        StringIndexOutOfBoundsException<br>        ClassCastException//类造型异常<br>        NumberFormatException<br>        IllegleArgumentException<br>3)错误：Java.lang.Error                   继承自Java.lang.Throwable</p>
