@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo]]></title>
+    <url>%2F2018%2F06%2F20%2Fhadoop-03%2F</url>
+    <content type="text"><![CDATA[问题描述org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.AccessControlException):Access denied for useorg.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.AccessControlException):Access denied for use再通过fs访问DataNode的信息时，出现如下错误信息 解决方法hyxy替换成你的虚拟机中运行hadoop的一个已经存在的用户名]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>hadoop</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[throw和throws的区别]]></title>
     <url>%2F2018%2F05%2F24%2Fexception-03%2F</url>
     <content type="text"><![CDATA[1)throws出现在函数头，throw出现在函数体 2)throws表示了一种抛出异常的可能性，throw则是一定抛出了某种异常 3)两者都是消极处理异常的方式，不会由函数处理异常，而是由上层函数去调用处理。]]></content>
