@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[hexo]]></title>
+    <title><![CDATA[Access denied for user Administrator. Superuser privilege is required]]></title>
     <url>%2F2018%2F06%2F20%2Fhadoop-03%2F</url>
-    <content type="text"><![CDATA[问题描述org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.AccessControlException):Access denied for useorg.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.AccessControlException):Access denied for use再通过fs访问DataNode的信息时，出现如下错误信息 解决方法hyxy替换成你的虚拟机中运行hadoop的一个已经存在的用户名]]></content>
+    <content type="text"><![CDATA[问题描述org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.AccessControlException): Access denied for user Administrator. Superuser privilege is required再通过fs访问DataNode的信息时，出现如下错误信息 解决方法hyxy替换成你的虚拟机中运行hadoop的一个已经存在的用户名]]></content>
       <categories>
         <category>hadoop</category>
       </categories>

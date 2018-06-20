@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-20T08:38:41.929Z</updated>
+  <updated>2018-06-20T08:45:26.133Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo</title>
+    <title>Access denied for user Administrator. Superuser privilege is required</title>
     <link href="http://yoursite.com/2018/06/20/hadoop-03/"/>
     <id>http://yoursite.com/2018/06/20/hadoop-03/</id>
     <published>2018-06-20T08:35:53.000Z</published>
-    <updated>2018-06-20T08:38:41.929Z</updated>
+    <updated>2018-06-20T08:45:26.133Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.AccessControlException):<br>Access denied for useorg.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.AccessControlException):<br>Access denied for use<br><img src="\image\hadoop_02\1.png" alt="avatar"><br>再通过fs访问DataNode的信息时，出现如下错误信息<br><img src="\image\hadoop_02\3.png" alt="avatar"></p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p><img src="\image\hadoop_02\2.png" alt="avatar"><br>hyxy替换成你的虚拟机中运行hadoop的一个已经存在的用户名</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.AccessControlException): Access denied for user Administrator. Superuser privilege is required<br><img src="\image\hadoop_02\1.png" alt="avatar"><br>再通过fs访问DataNode的信息时，出现如下错误信息<br><img src="\image\hadoop_02\3.png" alt="avatar"></p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p><img src="\image\hadoop_02\2.png" alt="avatar"><br>hyxy替换成你的虚拟机中运行hadoop的一个已经存在的用户名</p>]]></content>
     
     <summary type="html">
     
